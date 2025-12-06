@@ -93,7 +93,7 @@ Il fit di un diffrattogramma permette di ottenere informazioni qualitative e qua
   a_{\text{C}_{1-x}\text{D}_x} = (1-x)a_{\text{C}} + xa_{\text{D}}.
   \label{eq: Vegard}
 \end{equation}
-L'equazione \ref{eq: Vegard}, che ha origine euristica, è un'approssimazione che si basa sull'assunzione che la temperatura sia la stessa per entrambi i composti ACX$_3$ e ADX$_3$ e che essi siano in forma pura prima che la miscela dia origine alla sostanza risultante AC$_{1-x}$D$_x$X$_3$.
+L'equazione \ref{eq: Vegard}, che ha origine euristica, è un'approssimazione che si basa sull'assunzione che la temperatura sia la stessa per entrambi i composti, ACX$_3$ e ADX$_3$, e che essi siano in forma pura prima che la miscela dia origine alla sostanza risultante AC$_{1-x}$D$_x$X$_3$.
 
 
 \section*{Esperimento}
@@ -106,15 +106,15 @@ Uno strumento XRD può effettuare misure secondo diverse geometrie, in funzione 
   \label{fig: Bragg-Brentano}
 \end{figure}
 
-La geometria Bragg-Brentano, rappresentata essenzialmente in figura \ref{fig: Bragg-Brentano}, è utilizzata proprio nel caso di misure XRD su polveri. Il genere di scansione è $\vartheta / 2\vartheta$, ovvero il tubo a raggi X e il rilevatore si muovono simultaneamente lungo una circonferenza di raggio fissato, mantenendo costante il rapporto $\vartheta / 2\vartheta$. La sorgente diverge sul campione, e si rifrange sul rilevatore grazie a lenti convergenti. L'angolo di incidenza $\vartheta$ determina il raggio della circonferenza di fuoco, ovvero quali punti sulla superficie del campione possono essere catturati, con la migliore precisione disponibile, dal rilevatore. Questo percorso fittizio costituisce un limite alla qualità della misura; infatti, la superficie del campione è ideale sia tangente alla circonferenza e il punto di tangenza deve trovarsi sul luogo della superficie che si desidera studiare. L'effetto di un posizionamento non ottimale risulta nello spostamento e/o allargamento dei picchi.
+La geometria Bragg-Brentano, rappresentata essenzialmente in figura \ref{fig: Bragg-Brentano}, è utilizzata proprio nel caso di misure XRD su polveri. Il genere di scansione è $\vartheta / 2\vartheta$, ovvero il tubo a raggi X e il rilevatore si muovono simultaneamente lungo una circonferenza di raggio fissato, mantenendo costante il rapporto $\vartheta / 2\vartheta$. La sorgente diverge sul campione, e si rifrange sul rilevatore grazie a lenti convergenti. L'angolo di incidenza $\vartheta$ determina il raggio della circonferenza di fuoco, ovvero quali punti sulla superficie del campione possono essere catturati dal rilevatore, con la migliore precisione disponibile. Questo percorso fittizio costituisce un limite alla qualità della misura; infatti, la superficie del campione è ideale sia tangente alla circonferenza e il punto di tangenza deve trovarsi sul luogo della superficie che si desidera studiare. L'effetto di un posizionamento non ottimale risulta nello spostamento e/o allargamento dei picchi.
 
-Nello specifico dello strumento adoperato~\supercite{XRD:spec}, il goniometro che individua la circonferenza di diffrazione è perpendicolare alla superficie del campione e il tubo a raggi X possiede un anodo in rame. L'importanza del materiale, sorgente per i fotoni incidenti, risiede nella lunghezza d'onda caratteristica di emissione; elementi diversi provocano una traslazione complessiva del diffrattogramma, che ostacola un confronto diretto tra grafici ottenuti con tubi a raggi X di anodo costituito da materiale differente.
+Nello specifico dello strumento adoperato~\supercite{XRD:spec}, il goniometro che individua la circonferenza di diffrazione è perpendicolare alla superficie del campione e il tubo a raggi X possiede un anodo in rame. L'importanza del materiale, sorgente per i fotoni incidenti, risiede nella lunghezza d'onda caratteristica di emissione; elementi diversi provocano una traslazione complessiva del diffrattogramma, che ostacola un confronto diretto tra grafici ottenuti con tubi a raggi X di anodo di materiale differente.
 
 Le polveri osservate sono quattro perovskiti, di cui due ternarie, Cs$_2$AgInCl$_6$ e Cs$_2$NaInCl$_6$, e due quaternarie, nominalmente Cs$_2$Ag$_{0.8}$Na$_{0.2}$InCl$_6$ e Cs$_2$Ag$_{0.4}$Na$_{0.6}$InCl$_6$, miscele parziali delle prime. Al fine di ottenere una condizione quanto più vicina a quella di polvere ideale, si rende necessario fare uso di mortaio e pestello in agata.
 
 
 \section*{Risultati}
-Il fit di ogni diffrattogramma è stato realizzato mediante il software MAUD~\supercite{maud}, che permette di usufruire del \emph{raffinamento Rietveld}; si tratta di un criterio di regressione che si basa sul \emph{metodo dei minimi quadrati non-lineare}. L'obiettivo è minimizzare la \emph{Weighted Sum of Sqaures}:
+Il fit di ogni diffrattogramma è stato realizzato mediante il software MAUD~\supercite{maud}, che permette di usufruire del \emph{raffinamento Rietveld}; si tratta di un criterio di regressione che si basa sul \emph{metodo dei minimi quadrati non-lineare}. L'obiettivo è minimizzare la \emph{Weighted Sum of Squares}:
 \begin{equation}
   WSS = \displaystyle\sum_{k} w_k \left\lbrack I^{(exp)}_k - I^{(fit)}_k \right\rbrack^2,
   \label{eq: WSS}
@@ -189,8 +189,7 @@ Il passo successivo è determinare i valori iniziali per i parametri che descriv
   \label{fig: Ag04Na06}
 \end{figure}
 
-Infine, è tempo di rilasciare il vincolo sulla quantità bersaglio del fit, ovvero la costante reticolare. A questo punto, secondo l'equazione \ref{eq: Rwp}, si è ottenuto un valore che si aggira attorno al $20\%$. A seguito di un'osservazione empirica di un grado di bontà della regressione non soddisfacente, si è scelto di raffinare anche gli elementi della matrice B, che appare nel termine del fattore di struttura del cristallo.
-
+Infine, è tempo di rilasciare il vincolo sulla quantità bersaglio del fit, ovvero la costante reticolare. A questo punto, secondo l'equazione \ref{eq: Rwp}, si è ottenuto un valore che si aggira attorno al $20\%$. A seguito di un'osservazione empirica di un grado di bontà della regressione non soddisfacente, si è scelto di raffinare anche gli elementi della matrice $B$, che appare come termine del fattore di struttura del cristallo.
 \begin{center}
 \begin{table}[htbp]\setlength\belowcaptionskip{-20pt}
     \centering
@@ -209,7 +208,7 @@ Infine, è tempo di rilasciare il vincolo sulla quantità bersaglio del fit, ovv
 \end{table}
 \end{center}
 
-In tabella \ref{tab: Rwp} sono elencate le stime finali per i valori-$R$ \emph{Weighted Pattern} (come in tabella \ref{tab: delta2theta}, per completezza, sono stati compresi anche i campioni il cui fit non è stato ancora discusso). Salta all'occhio il risultato ottenuto per il campione Cs$_2$NaInCl$_6$, il cui maggiore valore, rispetto alle controparti, si attribuisce all'adattamento rozzo del file ".cif" per il campione Cs$_2$AgInCl$_6$.
+In tabella \ref{tab: Rwp}, sono elencate le stime finali per i valori-$R$ \emph{Weighted Pattern} (come in tabella \ref{tab: delta2theta}, per completezza, sono stati compresi anche i campioni il cui fit non è stato ancora discusso). Salta all'occhio il risultato ottenuto per il campione Cs$_2$NaInCl$_6$, il cui maggiore valore rispetto alle controparti, si attribuisce all'adattamento rozzo del file ".cif" per il campione Cs$_2$AgInCl$_6$.
 
 Spostando l'attenzione alle figure \ref{fig: Ag08Na02} e \ref{fig: Ag04Na06}, come suggeriscono le tabelle \ref{tab: delta2theta} e \ref{tab: Rwp}, il raffinamento, per i campioni Cs$_2$Ag$_{0.8}$Na$_{0.2}$InCl$_6$ e Cs$_2$Ag$_{0.4}$Na$_{0.6}$InCl$_6$, ha subito un processo evolutivo simile a quello appena descritto. Infatti, a causa della composizione quaternaria di queste polveri, si è partiti dal file ".cif" per il campione Cs$_2$AgInCl$_6$ (considerato più affidabile della controparte Cs$_2$NaInCl$_6$) e si è aggiunto il quarto elemento, ovvero il sodio, modificando la concentrazione totale iniziale, sia di quest'ultimo sia dell'argento, in accordo con i valori nominali già noti delle rispettive concentrazioni parziali. Successivamente, si è rimosso il vincolo anche sulle percentuali di occupazione e si è lasciato che il software MAUD completasse il fit.
 \begin{center}
@@ -231,7 +230,7 @@ Spostando l'attenzione alle figure \ref{fig: Ag08Na02} e \ref{fig: Ag04Na06}, co
 \end{center}
 La tabella \ref{tab: a} mostra i risultati ottenuti per ogni costante reticolare.
 
-Esplicitando $x$ nell'equazione \ref{eq: Vegard}, è finalmente possibile stimare il valore di concentrazione relativa parziale tra i due elementi, argento e sodio, che condividono gli stessi siti di occupazione. Si è posto 
+Esplicitando $x$ nell'equazione \ref{eq: Vegard}, è finalmente possibile stimare il valore di concentrazione relativa parziale tra i due elementi, argento e sodio, che condividono gli stessi siti di occupazione.
 \begin{center}
 \begin{table}[htbp]\setlength\belowcaptionskip{-20pt}
     \centering
@@ -251,17 +250,33 @@ La tabella \ref{tab: x} mostra le stime computate. L'errore sulla misura è dete
 
 
 \section*{Conclusioni}
+L'obiettivo dell'esperienza di laboratorio è stato rilevare i diffrattogrammi di polveri di perovksite del tipo Cs$_2$Ag$_{1-x}$Na$_{x}$InCl$_6$, con $x~=~\left\{ 0, 1, 0.2, 0.6 \right\}$ nominalmente, eseguire un raffinamento Rietveld per estrarre la rispettiva costante reticolare, e infine, tramite la legge di Vegard, stimare l'effettiva concentrazione relativa parziale dei composti quaternari.
+\begin{center}
+\begin{table}[htbp]\setlength\belowcaptionskip{-20pt}
+    \centering
+\begin{tabular}{cc}
+    \hline
+    \textbf{campione} & $\mathbf{\delta x}$ ($\%$)\\
+    \hline
+    Cs$_2$Ag$_{0.8}$Na$_{0.2}$InCl$_6$ & $7.31$\\
+    Cs$_2$Ag$_{0.4}$Na$_{0.6}$InCl$_6$ & $4.92$\\
+    \hline
+\end{tabular}
+\caption{Discrepanze $\delta x$, rispetto ai valori nominali, delle concentrazioni relative parziali $x$ di argento e sodio, in perovskiti del tipo Cs$_2$Ag$_{1-x}$Na$_{x}$InCl$_6$, calcolate secondo la legge di Vegard, considerando il limite superiore dato dall'incertezza sulla misura.}
+\label{tab: discr x}
+\end{table}
+\end{center}
 
+La tabella \ref{tab: discr x} mostra le discrepanze percentuali dei valori calcolati rispetto a quelli nominali. Tenendo conto del significato intrinseco di \emph{quantità nominale}, si rende necessario ridimensionare la significatività dei disaccordi ottenuti; infatti, nonostante si tratti comunque di discrepanze accettabili, non è possibile affermare, con altrettanta certezza, se tali divari siano dovuti ad un fit di bontà non ottimale o ad una rilevazione XRD e ad una sintesi del materiale non ideale. Detto questo, gli errori stimati per le costanti reticolari, in tabella \ref{tab: a}, suggerirebbero la maggiore influenza degli ultimi due casi.
 
+Concentrandosi sulla validità del fit Rietveld, la tabella \ref{tab: Rwp} evidenzia come l'accorgimento approssimativo di sostituire all'argento il sodio nel file ".cif" del campione Cs$_2$AgInCl$_6$, si sia riflettuto in valori di $R_{wp}$ più discutibili ogni qual volta la presenza del sodio fosse dominante. Inoltre, da un'osservazione empirica di tutti i grafici presentati, si può evincere come un'intensità, non sensibilmente combaciante con i dati sperimentali, non sia in generale un sintomo di un raffinamento fallimentare, ma che abbia più peso la maniera in cui la curva di regressione risale i picchi e mima il background.
+
+Al fine di migliorare la qualità del rendimento di un eventuale lavoro di laboratorio analogo, è, innanzitutto, consigliabile la realizzazione di un file ".cif" per la perovskite Cs$_2$NaInCl$_6$, così da poter dare in pasto al programma di fitting, valori, per i parametri iniziali, più consistenti con la struttura di riferimento. Inoltre, è suggeribile ridurre il numero di parametri di Rietveld attivamente raffinati al numero più piccolo ammissibile, in modo tale che la condizione di convergenza sia, sì rispettata, ma sia il più vicino possibile all'effettivo minimo assoluto di $WSS$, e il processo di ottimizzazione non cada in minimi relativi insoddisfacenti.
 
 
 \onecolumn
 \newpage
 \printbibliography
-
-\newpage
-\twocolumn
-\section*{Appendice}
 
 
 \end{document}
