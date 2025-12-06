@@ -1,0 +1,408 @@
+data_instrument_Diffraction Instrument
+_diffrn_measurement_device_type 'Diffraction Instrument'
+_maud_optional_intensity_factor 1.0
+_pd_proc_intensity_incident 0.27881625(7.882052) #positive
+
+
+#subordinateObject_none cal
+
+_inst_intensity_calibration 'none cal'
+
+
+#end_subordinateObject_none cal
+
+
+#subordinateObject_Instrument disalignment
+
+_inst_angular_calibration 'Instrument disalignment'
+
+
+loop_
+_riet_par_2-theta_offset
+  -0.032391306(0.0048700925)
+
+
+#end_subordinateObject_Instrument disalignment
+
+
+#subordinateObject_Bragg-Brentano
+
+_pd_instr_geometry 'Bragg-Brentano'
+
+_diffrn_radiation_monochromator filtered
+_pd_instr_2theta_monochr_post 0
+_pd_instr_dist_src/samp 175.0
+_pd_instr_monochr_pre_spec filtered
+_pd_instr_2theta_monochr_pre 0
+_pd_instr_divg_eq_src/samp 0.0
+_pd_instr_divg_slit_auto false
+_pd_instr_divg_ax_src/samp 0.0
+_diffrn_radiation_polarisn_norm 0
+_diffrn_radiation_polarisn_ratio 0
+
+#end_subordinateObject_Bragg-Brentano
+
+
+#subordinateObject_Theta-2Theta
+
+_diffrn_measurement_method 'Theta-2Theta'
+
+
+#end_subordinateObject_Theta-2Theta
+
+
+#subordinateObject_X-ray tube
+
+_diffrn_radiation_type 'X-ray tube'
+
+_diffrn_dynamical_scattering_correction true
+_diffrn_dynamical_scattering_correction_crystallite false
+
+#subordinateObject_1
+
+_diffrn_radiation_wavelength_id '1'
+
+_diffrn_radiation_wavelength 1.5405929(3.6517324E-4)
+_diffrn_radiation_wavelength_wt 1.0000006(25.259712)
+
+#end_subordinateObject_1
+
+
+#subordinateObject_2
+
+_diffrn_radiation_wavelength_id '2'
+
+_diffrn_radiation_wavelength 1.5444274(3.7579035E-4)
+_diffrn_radiation_wavelength_wt 0.4999991(12.631986)
+
+#end_subordinateObject_2
+
+
+#end_subordinateObject_X-ray tube
+
+
+#subordinateObject_Scintillation
+
+_diffrn_radiation_detector 'Scintillation'
+
+
+#end_subordinateObject_Scintillation
+
+
+#subordinateObject_Caglioti PV
+
+_diffrn_inst_broadening 'Caglioti PV'
+
+_riet_caglioti_d_dep true
+_riet_asymmetry_tan_dep true
+_riet_omega/chi_broadening_convoluted false
+_riet_par_asymmetry_truncation 1.0
+_riet_par_asymmetry_reciprocal false
+
+loop_
+_riet_par_asymmetry_value
+  223.0327(62.661793)
+  -1.6154901(2.4030118)
+
+loop_
+_riet_par_caglioti_value
+  -0.0023678(0.0043502226)
+  0.033288263(0.026846971)
+  0.031805936(0.038481686)
+
+loop_
+_riet_par_gaussian_value
+  0.39347756(0.15274425)
+  0.015044913(0.0051214024)
+
+loop_
+_riet_par_broadening_omega
+  0
+
+loop_
+_riet_par_asymmetry_exp
+  0
+
+
+#end_subordinateObject_Caglioti PV
+
+
+#subordinateObject_none abs
+
+_exptl_absorpt_correction_type 'none abs'
+
+
+#end_subordinateObject_none abs
+
+data_instrument_Diffraction Instrument
+_diffrn_measurement_device_type 'Diffraction Instrument'
+_maud_optional_intensity_factor 1.0
+_pd_proc_intensity_incident 0.22796497(0.0025887217) #positive
+
+
+#subordinateObject_none cal
+
+_inst_intensity_calibration 'none cal'
+
+
+#end_subordinateObject_none cal
+
+
+#subordinateObject_Instrument disalignment
+
+_inst_angular_calibration 'Instrument disalignment'
+
+
+loop_
+_riet_par_2-theta_offset
+  0
+
+
+#end_subordinateObject_Instrument disalignment
+
+
+#subordinateObject_Bragg-Brentano
+
+_pd_instr_geometry 'Bragg-Brentano'
+
+_diffrn_radiation_monochromator filtered
+_pd_instr_2theta_monochr_post 0
+_pd_instr_dist_src/samp 175.0
+_pd_instr_monochr_pre_spec filtered
+_pd_instr_2theta_monochr_pre 0
+_pd_instr_divg_eq_src/samp 0.0
+_pd_instr_divg_slit_auto false
+_pd_instr_divg_ax_src/samp 0.0
+_diffrn_radiation_polarisn_norm 0
+_diffrn_radiation_polarisn_ratio 0
+
+#end_subordinateObject_Bragg-Brentano
+
+
+#subordinateObject_Theta-2Theta
+
+_diffrn_measurement_method 'Theta-2Theta'
+
+
+#end_subordinateObject_Theta-2Theta
+
+
+#subordinateObject_X-ray tube
+
+_diffrn_radiation_type 'X-ray tube'
+
+_diffrn_dynamical_scattering_correction true
+_diffrn_dynamical_scattering_correction_crystallite false
+
+#subordinateObject_1
+
+_diffrn_radiation_wavelength_id '1'
+
+_diffrn_radiation_wavelength 1.5405929
+_diffrn_radiation_wavelength_wt 1.0
+
+#end_subordinateObject_1
+
+
+#subordinateObject_2
+
+_diffrn_radiation_wavelength_id '2'
+
+_diffrn_radiation_wavelength 1.5444274
+_diffrn_radiation_wavelength_wt 0.5
+
+#end_subordinateObject_2
+
+
+#end_subordinateObject_X-ray tube
+
+
+#subordinateObject_Scintillation
+
+_diffrn_radiation_detector 'Scintillation'
+
+
+#end_subordinateObject_Scintillation
+
+
+#subordinateObject_Caglioti PV
+
+_diffrn_inst_broadening 'Caglioti PV'
+
+_riet_caglioti_d_dep true
+_riet_asymmetry_tan_dep true
+_riet_omega/chi_broadening_convoluted false
+_riet_par_asymmetry_truncation 1.0
+_riet_par_asymmetry_reciprocal false
+
+loop_
+_riet_par_asymmetry_value
+  500
+  0
+
+loop_
+_riet_par_caglioti_value
+  0.0025
+  0
+  0
+
+loop_
+_riet_par_gaussian_value
+  0.5
+  0
+
+loop_
+_riet_par_broadening_omega
+  0
+
+loop_
+_riet_par_asymmetry_exp
+  0
+
+
+#end_subordinateObject_Caglioti PV
+
+
+#subordinateObject_none abs
+
+_exptl_absorpt_correction_type 'none abs'
+
+
+#end_subordinateObject_none abs
+
+data_instrument_Diffraction Instrument
+_diffrn_measurement_device_type 'Diffraction Instrument'
+_maud_optional_intensity_factor 1.0
+_pd_proc_intensity_incident 0.22578956(0.0029139747) #positive
+
+
+#subordinateObject_none cal
+
+_inst_intensity_calibration 'none cal'
+
+
+#end_subordinateObject_none cal
+
+
+#subordinateObject_Instrument disalignment
+
+_inst_angular_calibration 'Instrument disalignment'
+
+
+loop_
+_riet_par_2-theta_offset
+  0
+
+
+#end_subordinateObject_Instrument disalignment
+
+
+#subordinateObject_Bragg-Brentano
+
+_pd_instr_geometry 'Bragg-Brentano'
+
+_diffrn_radiation_monochromator filtered
+_pd_instr_2theta_monochr_post 0
+_pd_instr_dist_src/samp 175.0
+_pd_instr_monochr_pre_spec filtered
+_pd_instr_2theta_monochr_pre 0
+_pd_instr_divg_eq_src/samp 0.0
+_pd_instr_divg_slit_auto false
+_pd_instr_divg_ax_src/samp 0.0
+_diffrn_radiation_polarisn_norm 0
+_diffrn_radiation_polarisn_ratio 0
+
+#end_subordinateObject_Bragg-Brentano
+
+
+#subordinateObject_Theta-2Theta
+
+_diffrn_measurement_method 'Theta-2Theta'
+
+
+#end_subordinateObject_Theta-2Theta
+
+
+#subordinateObject_X-ray tube
+
+_diffrn_radiation_type 'X-ray tube'
+
+_diffrn_dynamical_scattering_correction true
+_diffrn_dynamical_scattering_correction_crystallite false
+
+#subordinateObject_1
+
+_diffrn_radiation_wavelength_id '1'
+
+_diffrn_radiation_wavelength 1.5405929
+_diffrn_radiation_wavelength_wt 1.0
+
+#end_subordinateObject_1
+
+
+#subordinateObject_2
+
+_diffrn_radiation_wavelength_id '2'
+
+_diffrn_radiation_wavelength 1.5444274
+_diffrn_radiation_wavelength_wt 0.5
+
+#end_subordinateObject_2
+
+
+#end_subordinateObject_X-ray tube
+
+
+#subordinateObject_Scintillation
+
+_diffrn_radiation_detector 'Scintillation'
+
+
+#end_subordinateObject_Scintillation
+
+
+#subordinateObject_Caglioti PV
+
+_diffrn_inst_broadening 'Caglioti PV'
+
+_riet_caglioti_d_dep true
+_riet_asymmetry_tan_dep true
+_riet_omega/chi_broadening_convoluted false
+_riet_par_asymmetry_truncation 1.0
+_riet_par_asymmetry_reciprocal false
+
+loop_
+_riet_par_asymmetry_value
+  100
+  0
+
+loop_
+_riet_par_caglioti_value
+  0.0025
+  0
+  0
+
+loop_
+_riet_par_gaussian_value
+  0.5
+  0
+
+loop_
+_riet_par_broadening_omega
+  0
+
+loop_
+_riet_par_asymmetry_exp
+  0
+
+
+#end_subordinateObject_Caglioti PV
+
+
+#subordinateObject_none abs
+
+_exptl_absorpt_correction_type 'none abs'
+
+
+#end_subordinateObject_none abs
+

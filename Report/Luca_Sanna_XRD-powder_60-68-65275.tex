@@ -1,0 +1,181 @@
+\documentclass[a4paper,twocolumn,12 pt]{article}
+\usepackage{silence}  % pacchetto che permette di sopprimere warnings cagacazzo
+\WarningFilter{latex}{`h' float specifier changed to `ht'}
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=20mm,
+ top=20mm,
+ }
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,italian]{babel}
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amstext}
+\usepackage{booktabs}
+\usepackage{wrapfig}
+\usepackage{siunitx}
+\usepackage{subcaption}
+\usepackage{amssymb}
+\usepackage{animate}
+\usepackage{csquotes}
+\usepackage{biblatex}
+\usepackage{xurl}   % compatta gli url
+\usepackage{hyperref}
+\usepackage{indentfirst}
+\usepackage[font=footnotesize, labelfont=bf]{caption}
+% \usepackage[LGRgreek]{mathastext}
+\usepackage{esint}
+\makeatletter
+% make esint definition in line with amsmath
+\@for\next:={int,iint,iiint,iiiint,dotsint,oint,oiint,sqint,sqiint,
+  ointctrclockwise,ointclockwise,varointclockwise,varointctrclockwise,
+  fint,varoiint,landupint,landdownint}\do{%
+    \expandafter\edef\csname\next\endcsname{%
+      \noexpand\DOTSI
+      \expandafter\noexpand\csname\next op\endcsname
+      \noexpand\ilimits@
+    }%
+  }
+\makeatother
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage{subdepth}
+
+\addbibresource{citations.bib}
+\hbadness=1000000
+
+\pagestyle{plain}
+
+\title{\textbf{Stima della concentrazione parziale di siti sostituzionali in polveri di perovskite doppia}}
+\author{\textbf{Luca Sanna, 60/68/65275}}
+\date{\textbf{05/12/2025}}
+
+
+\begin{document}
+\twocolumn[
+\maketitle
+  \begin{@twocolumnfalse}\maketitle
+        \begin{abstract}\noindent
+          L'obiettivo dell'esperienza di laboratorio è calcolare la concentrazione parziale $x$ di Ag e Na, come siti sostituzionali in polveri di perovskite doppia del tipo Cs$_2$Ag$_{1-x}$Na$_x$InCl$_6$. Tramite analisi Rietveld, si sono ottenuti i risultati per due diversi campioni di $(0.180 \pm 0.006) \%$ e $(0.560 \pm 0.011) \%$, di discrepanza con i valori nominali rispettivamente $7.31\%$ e $4.92\%$.
+        \end{abstract}
+  \end{@twocolumnfalse}
+]
+
+\raggedbottom
+\section*{Introduzione}
+La tecnica XRD (X-Ray Diffraction) permette di sondare il reticolo reciproco di un sistema cristallino.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width = 1\linewidth]{../Bragg.png}
+  \caption{Schema esemplificativo della legge di Bragg.}
+  \label{fig: Bragg}
+\end{figure}
+
+Radiazione elettromagnetica X, di lunghezza d'onda $\lambda$ comparabile con le tipiche distanze inter-atomiche in un cristallo, e di vettore d'onda $\vec{k}_{in}$, è diffratta costruttivamente, con vettore d'onda $\vec{k}_{out}$, secondo la \emph{legge di Bragg}:
+\begin{equation}
+  nd \sin \vartheta = m \lambda,
+  \label{eq: Bragg}
+\end{equation}
+dove $n$ è l'indice di rifrazione del mezzo (solitamente aria, $n = 1$), $d$ è la distanza tra i piani cristallini che rispettano la stessa orientazione, $\vartheta$ è l'angolo di incidenza rispetto alla direzione parallela al piano di diffrazione, $m$ è l'ordine diffrattivo (si consideri soltanto il primo ordine, $m = 1$). La figura \ref{fig: Bragg} permette di visualizzare il fenomeno sopra descritto.
+
+Il risultato della misura è un \emph{diffrattogramma}, ovvero la distribuzione dei conteggi relativi ai fotoni diffratti con successo sullo schermo di acquisizione, in funzione dell'angolo diffrattivo $2 \vartheta$. A ogni orientazione privilegiata dei piani cristallini corrisponde un picco nel grafico. Maggiore il grado di simmetria della struttura reticolare, minore il numero di picchi; più numerosa la famiglia di piani osservata, maggiore l'intensità del picco associato.
+
+Nel contesto del lavoro di laboratorio proposto, è rilevante il concetto di \emph{polvere}. Si definisce una polvere ideale un campione costituito da un'infinito numero di cristalliti (reticoli cristallini che mantengono la stessa struttura e orientazione) e caratterizzato da un'infinito numero di orientazioni casuali. Il diffrattogramma tipico di una polvere è dunque costituito di numerosi picchi specifici di quel determinato materiale, e rappresentano un'\emph{impronta digitale} che ne permette l'identificazione.
+
+Il fit di un diffrattogramma permette di ottenere informazioni qualitative e quantitative sul materiale osservato. Di rilievo per l'esperimento in questione, sono la costante reticolare $a$ e l'occupazione, totale e/o parziale $x$, di un certo elemento nella cella unitaria della struttura cristallina. Si consideri l'esempio delle perovskiti doppie, che rispettano la formula chimica ridotta più generale ABX$_3$; l'elemento contrassagnato dalla lettera B può essere sostituito da due o più elementi diversi, (nel caso più semplice di due, essi siano C e D) che condividono l'occupazione totale sui siti originali. La formula chimica diventa così AC$_{1-x}$D$_x$X$_3$, che identifica un cristallo di costante reticolare $a_{\text{C}_{1-x}\text{D}_x}$. Considerando le costanti reticolari $a_{\text{C}}$ e $a_{\text{D}}$ delle perovskiti rispettivamente ACX$_3$ e ADX$_3$, si enuncia la \emph{legge di Vegard}:
+\begin{equation}
+  a_{\text{C}_{1-x}\text{D}_x} = (1-x)a_{\text{C}} + xa_{\text{D}}.
+  \label{eq: Vegard}
+\end{equation}
+L'equazione \ref{eq: Vegard}, che ha origine euristica, è un'approssimazione che si basa sull'assunzione che la temperatura sia la stessa per entrambi i composti ACX$_3$ e ADX$_3$ e che essi siano in forma pura prima che la miscela dia origine alla sostanza risultante AC$_{1-x}$D$_x$X$_3$.
+
+
+\section*{Esperimento}
+Uno strumento XRD può effettuare misure secondo diverse geometrie, in funzione del tipo di campione e del genere di misura che si vuole ottenere.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width = 1\linewidth]{../Bragg-Brentano.png}
+  \caption{Schema della geometria XRD Bragg-Brentano.}
+  \label{fig: Bragg-Brentano}
+\end{figure}
+
+La geometria Bragg-Brentano, rappresentata essenzialmente in figura \ref{fig: Bragg-Brentano}, è utilizzata proprio nel caso di misure XRD su polveri. Il genere di scansione è $\vartheta / 2\vartheta$, ovvero il tubo a raggi X e il rilevatore si muovono simultaneamente lungo una circonferenza di raggio fissato, mantenendo costante il rapporto $\vartheta / 2\vartheta$. La sorgente diverge sul campione, e si rifrange sul rilevatore grazie a lenti convergenti. L'angolo di incidenza $\vartheta$ determina il raggio della circonferenza di fuoco, ovvero quali punti sulla superficie del campione possono essere catturati, con la migliore precisione disponibile, dal rilevatore. Questo percorso fittizio costituisce un limite alla qualità della misura; infatti, la superficie del campione è ideale sia tangente alla circonferenza e il punto di tangenza deve trovarsi sul luogo della superficie che si desidera studiare. L'effetto di un posizionamento non ottimale risulta nello spostamento e/o allargamento dei picchi.
+
+Nello specifico dello strumento adoperato~\supercite{XRD:spec}, il goniometro che individua la circonferenza di diffrazione è perpendicolare alla superficie del campione e il tubo a raggi X possiede un anodo in rame. L'importanza del materiale, sorgente per i fotoni incidenti, risiede nella lunghezza d'onda caratteristica di emissione; elementi diversi provocano una traslazione complessiva del diffrattogramma, che ostacola un confronto diretto tra grafici ottenuti con tubi a raggi X di anodo costituito da materiale differente.
+
+Le polveri osservate sono quattro perovskiti, di cui due ternarie, Cs$_2$AgInCl$_6$ e Cs$_2$NaInCl$_6$, e due quaternarie, nominalmente Cs$_2$Ag$_{0.8}$Na$_{0.2}$InCl$_6$ e Cs$_2$Ag$_{0.4}$Na$_{0.6}$InCl$_6$, miscele parziali delle prime. Al fine di ottenere una condizione quanto più vicina a quella di polvere ideale, si rende necessario fare uso di mortaio e pestello in agata.
+
+
+\section*{Risultati}
+Il fit di ogni diffrattogramma è stato realizzato mediante il software \emph{MAUD}~\supercite{maud}, che permette di usufruire del \emph{raffinamento Rietveld}; si tratta di un criterio di regressione che si basa sul \emph{metodo dei minimi quadrati non-lineare}. L'obiettivo è minimizzare la \emph{Weighted Sum of Sqaures}:
+\begin{equation}
+  WSS = \displaystyle\sum_{k} w_k \left\lbrack I^{(exp)}_k - I^{(fit)}_k \right\rbrack^2,
+  \label{eq: WSS}
+\end{equation}
+dove $k$ è un indice che corre su ogni $k$-esima misura del diffrattogramma, $I^{(exp)}_k$ e $I^{(fit)}_k$ sono rispettivamente l'intensità attesa e quella calcolata tramite il fit, e
+\begin{equation}
+  w_k = \frac{1}{\sqrt{I^{(exp)}_k}}
+  \label{eq: pesi}
+\end{equation}
+è il peso $k$-esimo che la $k$-esima misura di intensità attesa porta nell'ottimizzazione dell'equazione \ref{eq: WSS}.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width = 1\linewidth]{../Datasets/A01_Cs2AgInCl6.pdf}
+  \caption{Fit Rietveld per un diffrattogramma di Cs$_2$AgInCl$_6$ in polvere.}
+  \label{fig: Ag}
+\end{figure}
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width = 1\linewidth]{../Datasets/A10_Cs2NaInCl6.pdf}
+  \caption{Fit Rietveld per un diffrattogramma di Cs$_2$NaInCl$_6$ in polvere.}
+  \label{fig: Na}
+\end{figure}
+
+In termini pratici, si tiene in considerazione il valore $R$ di \emph{Weighted Pattern}:
+\begin{equation}
+  R_{wp} = \sqrt{\frac{\displaystyle\sum_{k} \left\{ w_k \left\lbrack I^{(exp)}_k - I^{(fit)}_k \right\rbrack \right\}^2}{\displaystyle\sum_{k} \left\lbrack w_k I^{(exp)}_k \right\rbrack^2}},
+  \label{eq: Rwp}
+\end{equation}
+la cui riduzione progressiva è sintomo che la minimizzazione dell'equazione \ref{eq: WSS}, e di conseguenza la bontà del fit, stia andando nella giusta direzione.
+
+Le funzioni matematiche, che secondo Rietveld consentono di costruire la regressione bersaglio, dipendendono da svariati parametri; soltanto alcuni, però, sono significativi abbastanza da dominare il processo di ottimizzazione. Inoltre, è importante seguire un ordine di priorità nel raffinamento, cosicché la minimizzazione non debba far fronte alla variazione di più parametri di quanti l'algoritmo riesca a gestire, al fine di raggiungere la convergenza.
+
+Le figure \ref{fig: Ag} e \ref{fig: Na} siano di riferimento allo scopo di visualizzare 
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width = 1\linewidth]{../Datasets/A02_Cs2Na0.2Ag0.8InCl6.pdf}
+  \caption{.}
+  \label{fig: Ag08Na02}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width = 1\linewidth]{../Datasets/A04_Cs2Na0.6Ag0.4InCl6.pdf}
+  \caption{.}
+  \label{fig: Ag04Na06}
+\end{figure}
+
+
+\section*{Conclusioni}
+
+
+
+\onecolumn
+\newpage
+\printbibliography
+
+\newpage
+\twocolumn
+\section*{Appendice}
+
+
+\end{document}

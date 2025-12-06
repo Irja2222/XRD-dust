@@ -1,0 +1,938 @@
+Jacobi matrix :
+#    0              1              2              3              4              5              6              7              8              9              10             11             12             13             14             15             16            
+0    2524.789211055
+1    95588.29674316 4142997.818422
+2    4141837.939128 1.967056333939 9.914146125188
+3    605.4819562359 25171.02902399 1156614.048577 6719.758411921
+4    -22.7708050603 -1519.36955877 -98829.6984100 48.77939504928 464668.6946465
+5    -1.80305746292 -2.60454873377 -0.00376767339 1.852373263281 -0.00348694471 1.179886081747
+6    -2.60461273169 -0.00376881699 -0.05463183475 4.074381145408 -0.05129423670 1.722621001181 2.515424847812
+7    11215.03017256 443725.4818138 1.933257398280 -11197.8647742 65256.35958625 -0.00298155509 -0.04351466777 2753173.483485
+8    4093.430514963 179714.7701408 8481682.923943 -3983.13839239 18407.81833920 -3.86210223225 -0.00565100519 757114.3300760 230853.9977558
+9    1671.457628790 79389.92010210 3974129.859212 -1594.50113998 5688.156192700 -4.94547104283 -7.26381875202 230748.9498293 78479.57123676 29608.69952913
+10   226.2446730199 7487.029927702 271035.6094304 -241.905517479 107.0500559522 -1.94820535149 -2.85429274294 29320.16238466 8118.353548881 2446.318214358 538.4387259462
+11   7482.130293410 270720.6323907 1.057381498620 -7947.00344577 4478.826682902 -2.87678594635 -0.00422663298 901804.3440092 270275.4252716 88179.37439147 15947.45004491 506053.8167797
+12   13.43420419452 -2500.63015082 -262767.259799 -1221.00083853 1365626.004220 -0.00495380972 -0.07302020141 310420.7322683 95158.50990296 32341.00794744 1301.113018592 46060.18609131 4450136.449326
+13   -0.44241915358 -19.2877994354 -861.353426641 0.463027456442 -0.27396140519 5.423937985045 7.958660297187 -22.4571818999 -7.81441642677 -2.92493650131 -0.33555636657 -12.2196174976 -2.35892924693 0.028303197486
+14   -2937134.29166 -1.29940629688 -5.84143269564 3078361.593291 -1032969.74203 0.005098601489 0.075929250134 -1.13174477914 -4.25361190823 -1.67479211415 -1776587.89367 -6.89063237283 -1.16857579943 202897.7896290 1.455464387242
+15   -1431.73059949 -64577.3246831 -2958800.67199 3605.501348115 -956.435744327 2.065978677072 -8.49645673172 -71211.0447602 -26078.4108463 -10111.8141526 -1054.13684321 -40971.6669742 -8457.44384472 112.1624129354 8.044399116655 447659.3157070
+16   -6349.06131959 -277883.368980 -1.23516719104 6955.292073597 -3245.44117562 1.689989209590 2.363193548580 -269683.328481 -100186.583174 -39249.7758024 -4009.16583019 -155018.955453 -30487.8456186 445.7454668601 3.197130014500 1767587.544169 7024361.023284
+Correlation matrix:
+#    0              1              2              3              4              5              6              7              8              9              10             11             12             13             14             15             16            
+0    -1.0          
+1    0.999995882492 -1.0          
+2    0.997198097489 0.982159536654 -1.0          
+3    -0.06617669870 0.064057499725 0.235372856996 -1.0          
+4    0.262576087747 -0.25639220730 -0.36537227284 3.467136956793 1.0           
+5    -0.07820664160 0.076450880975 0.006035825145 -0.76469932997 -2.28501431643 1.0           
+6    -0.00716827656 0.006887660833 0.209735187593 -0.56488385650 3.581783467543 -0.54086912044 -1.0          
+7    0.073652088017 -0.07123120758 -0.06448088140 1.589639990945 11.85693766430 -4.27735106012 0.969796944984 -1.0          
+8    -0.04945569532 0.047987907598 0.031376114862 -1.11772347783 0.235030676963 0.298376238694 -0.74629031437 0.927723322677 -1.0          
+9    -0.05929784506 0.057955156364 0.068358810250 -1.71067174927 -1.13451561478 1.060725077587 -1.37055670078 -0.38544707302 0.885754361488 -1.0          
+10   -0.00379448503 0.003803440021 0.110864832289 -1.10673111552 0.313422710454 0.300148110041 -0.69858157920 0.313836103660 -0.25088001705 -1.31188989439 -1.0          
+11   -0.05872842657 0.056142242428 0.073433911396 -0.85433384934 -0.58488415903 0.080258624890 0.259757987174 0.528120346314 -0.41831529833 -0.64146666238 2.142721015527 -1.0          
+12   0.120201891426 -0.11593425502 -0.08016843889 2.167495226775 66.24707050022 1.386531916969 1.112065101350 -0.86560838396 0.423771359389 0.240249074975 1.337238039846 1.275452661482 -1.0          
+13   0.039189394309 -0.04383480079 -0.03064731245 0.875278528514 -2.93922111109 0.688743526825 0.421386122367 -1.15336017244 0.584086091052 2.463746489077 1.493226950867 2.086338736936 -2.13854077847 -1.0          
+14   -0.07309937257 0.070169250805 0.038047075257 -0.55885084905 -0.69135687841 -0.09028048500 0.514975675317 0.658902002463 -0.32303051481 -0.41609517197 -0.52887230668 -0.97259698666 0.941560426744 0.865734909689 -1.0          
+15   -0.07400845249 0.071106231716 0.037732801523 -0.58484773098 3.267205202504 -0.35260315231 -1.24906977598 0.624581004755 -0.27176710529 -0.42320280222 -0.59379367687 -1.02025436436 0.907540972366 0.332529599163 -1.00058064091 -1.0          
+16   0.073172096758 -0.07024444128 -0.03801912519 0.560999159624 0.360471703256 0.112201466820 -0.36751522930 -0.65600454503 0.318731902504 0.416672101868 0.534275560798 0.976538083484 -0.93867621544 -0.63679880833 1.000004073429 1.000487435657 -1.0          
+Correlation matrix from Choleski decomposition :
+#    0              1              2              3              4              5              6              7              8              9              10             11             12             13             14             15             16            
+0    -1.0          
+1    0.999995882492 -1.0          
+2    0.997198097489 0.982159536654 -1.0          
+3    -0.06617669870 0.064057499725 0.235372856996 -1.0          
+4    0.262576087747 -0.25639220730 -0.36537227284 3.467136956793 1.0           
+5    -0.07820664160 0.076450880975 0.006035825145 -0.76469932997 -2.28501431643 1.0           
+6    -0.00716827656 0.006887660833 0.209735187593 -0.56488385650 3.581783467543 -0.54086912044 -1.0          
+7    0.073652088017 -0.07123120758 -0.06448088140 1.589639990945 11.85693766430 -4.27735106012 0.969796944984 -1.0          
+8    -0.04945569532 0.047987907598 0.031376114862 -1.11772347783 0.235030676963 0.298376238694 -0.74629031437 0.927723322677 -1.0          
+9    -0.05929784506 0.057955156364 0.068358810250 -1.71067174927 -1.13451561478 1.060725077587 -1.37055670078 -0.38544707302 0.885754361488 -1.0          
+10   -0.00379448503 0.003803440021 0.110864832289 -1.10673111552 0.313422710454 0.300148110041 -0.69858157920 0.313836103660 -0.25088001705 -1.31188989439 -1.0          
+11   -0.05872842657 0.056142242428 0.073433911396 -0.85433384934 -0.58488415903 0.080258624890 0.259757987174 0.528120346314 -0.41831529833 -0.64146666238 2.142721015527 -1.0          
+12   0.120201891426 -0.11593425502 -0.08016843889 2.167495226775 66.24707050022 1.386531916969 1.112065101350 -0.86560838396 0.423771359389 0.240249074975 1.337238039846 1.275452661482 -1.0          
+13   0.039189394309 -0.04383480079 -0.03064731245 0.875278528514 -2.93922111109 0.688743526825 0.421386122367 -1.15336017244 0.584086091052 2.463746489077 1.493226950867 2.086338736936 -2.13854077847 -1.0          
+14   -0.07309937257 0.070169250805 0.038047075257 -0.55885084905 -0.69135687841 -0.09028048500 0.514975675317 0.658902002463 -0.32303051481 -0.41609517197 -0.52887230668 -0.97259698666 0.941560426744 0.865734909689 -1.0          
+15   -0.07400845249 0.071106231716 0.037732801523 -0.58484773098 3.267205202504 -0.35260315231 -1.24906977598 0.624581004755 -0.27176710529 -0.42320280222 -0.59379367687 -1.02025436436 0.907540972366 0.332529599163 -1.00058064091 -1.0          
+16   0.073172096758 -0.07024444128 -0.03801912519 0.560999159624 0.360471703256 0.112201466820 -0.36751522930 -0.65600454503 0.318731902504 0.416672101868 0.534275560798 0.976538083484 -0.93867621544 -0.63679880833 1.000004073429 1.000487435657 -1.0          
+Analysis title: Put a title here
+
+Refined parameters:
+
+0 A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:DataFileSet_x:_riet_par_background_pol0 value:0.40696773 error:0.021529125
+1 A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:DataFileSet_x:_riet_par_background_pol1 value:0.005761483 error:0.0012611051
+2 A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:DataFileSet_x:_riet_par_background_pol2 value:-8.6586835E-5 error:1.6640475E-5
+3 A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:DataFileSet_x:Diffraction Instrument:_pd_proc_intensity_incident value:0.62467295 error:0.0019601109
+4 A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:DataFileSet_x:Diffraction Instrument:Instrument disalignment:_riet_par_2-theta_offset0 value:-0.014242168 error:6.871465E-4
+5 A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:DataFileSet_x:Diffraction Instrument:Caglioti PV:_riet_par_asymmetry_value0 value:204.68237 error:319877.22
+6 A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:DataFileSet_x:Diffraction Instrument:Caglioti PV:_riet_par_asymmetry_value1 value:89.341835 error:21915.88
+7 A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:DataFileSet_x:Diffraction Instrument:Caglioti PV:_riet_par_caglioti_value0 value:0.007291789 error:0.0011710055
+8 A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:DataFileSet_x:Diffraction Instrument:Caglioti PV:_riet_par_caglioti_value1 value:-0.019408027 error:0.008156073
+9 A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:DataFileSet_x:Diffraction Instrument:Caglioti PV:_riet_par_caglioti_value2 value:0.043190837 error:0.009771041
+10 A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:DataFileSet_x:Diffraction Instrument:Caglioti PV:_riet_par_gaussian_value0 value:-0.34117436 error:0.08537278
+11 A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:DataFileSet_x:Diffraction Instrument:Caglioti PV:_riet_par_gaussian_value1 value:0.02405951 error:0.0024253156
+12 A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:1546186-Cs2AgInCl6:_cell_length_a value:10.489761 error:2.2045789E-4
+13 A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:1546186-Cs2AgInCl6:Isotropic:_riet_par_cryst_size value:3225.2312 error:289.6308
+14 A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:1546186-Cs2AgInCl6:Isotropic:_riet_par_rs_microstrain value:4.4888683E-4 error:4.0945622E-5
+15 A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:1546186-Cs2AgInCl6:Atomic Structure:Ag:_atom_site_occupancy value:0.8214405 error:0.0029934165
+16 A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:1546186-Cs2AgInCl6:Atomic Structure:Na:_atom_site_occupancy value:0.204556 error:0.0046006115
+
+Refinement final output indices:
+Global Rwp: 0.0915295
+Global Rp: 0.061507687
+Global Rwpnb (no background): 0.106713384
+Global Rwpnb1 (no bkg rescaled): 0.07866028
+Global Rwpnb2 (no bkg rescaled^2): 0.067497425
+Global Rpnb (no background): 0.07733649
+Global Rpnb1 (no bkg rescaled): 0.058924828
+Global Rpnb2 (no bkg rescaled^2): 0.050010577
+Total energy: 0.0
+
+Refinement final output indices for single samples:
+Sample Sample_x :
+Sample Rwp: 0.0915295
+Sample Rp: 0.061507687
+Sample Rwpnb (no background): 0.106713384
+Sample Rwpnb1 (no bkg rescaled): 0.07866028
+Sample Rwpnb2 (no bkg rescaled^2): 0.067497425
+Sample Rpnb (no background): 0.07733649
+Sample Rpnb1 (no bkg rescaled): 0.058924828
+Sample Rpnb2 (no bkg rescaled^2): 0.050010577
+Sample energy: 0.0
+
+Refinement final output indices for single datasets:
+DataSet DataFileSet_x :
+DataSet Rwp: 0.0915295
+DataSet Rp: 0.061507687
+DataSet Rwpnb (no background): 0.106713384
+DataSet Rwpnb1 (no bkg rescaled): 0.07866028
+DataSet Rwpnb2 (no bkg rescaled^2): 0.067497425
+DataSet Rpnb (no background): 0.07733649
+DataSet Rpnb1 (no bkg rescaled): 0.058924828
+DataSet Rpnb2 (no bkg rescaled^2): 0.050010577
+
+Refinement final output indices for single spectra:
+Datafile A02_Cs2Na0.2Ag0.8InCl6 - cut.xy : Rwp: 0.0915295, Rp: 0.061507687, Rwpnb: 0.106713384, Rwpnb1: 0.07866028, Rwpnb2: 0.067497425, Rpnb: 0.07733649Rpnb1: 0.058924828Rpnb2: 0.050010577
+
+Sample:Sample_x
+
+Phases:
+1546186-Cs2AgInCl6
+Density: 3.951386122962234
+
+             Object tree full informations
+
+
+                 Object: A02_Cs2Na0.2Ag0.8InCl6.par
+
+String informations (CIF term, value) :
+_audit_creation_date, Mon Dec 01 14:57:11 CET 2025
+_audit_creation_method, Maud version 2.94
+_audit_update_record, Mon Dec 01 18:44:31 CET 2025
+_computing_structure_refinement, Maud, version 2.94
+_refine_ls_R_factor_all, 0.061507687
+_refine_ls_wR_factor_all, 0.0915295
+_refine_ls_goodness_of_fit_all, 0.6620079
+_publ_contact_author_name, Luca Lutterotti
+_publ_section_title, Put a title here
+_pd_proc_ls_extract_int, end of iteration
+_pd_proc_ls_texture_comp, end of iteration
+_computing_reduce_memory_occ, true
+_pd_proc_ls_theoretical_weight, false
+_pd_proc_ls_extract_pos, end of iteration
+_pd_proc_ls_strain_comp, end of iteration
+_pd_proc_ls_extract_Fhkl, end of iteration
+_pd_proc_ls_Fhkl_comp, end of iteration
+_pd_proc_ls_weight_scheme, sqrt
+_refine_ls_weighting_scheme, WgtSS
+_refine_ls_WSS_factor, 30.222313
+_maud_store_spectra_with_analysis, true
+_riet_remove_phases_under, 0.001
+_riet_refine_cell_over, 0.1
+_riet_refine_sizestrain_over, 0.1
+_riet_refine_crystal_structure_over, 0.1
+_riet_refine_texture_over, 0.15
+_riet_refine_strain_over, 0.25
+_pd_proc_ls_interpolation_comp, end of iteration
+_maud_analysis_name, A02_Cs2Na0.2Ag0.8InCl6.par
+_maud_analysis_prog_number, 0
+_maud_store_structure_factors_with_analysis, true
+_maud_store_texture_factors_with_analysis, true
+
+Subordinate objects :
+ Subordinate object number 0 :
+
+                 Object: Marqardt Least Squares
+
+String informations (CIF term, value) :
+_refine_ls_number_iteration, 5
+_riet_refine_ls_precision, 0.00000001
+_riet_refine_ls_derivative_step, 0.0001
+_riet_refine_ls_lambda, 0.01
+_riet_refine_ls_double_derivative, false
+
+
+Loops of subordinate objects :
+ Object loop number 0 :
+  Object number 0 :
+
+                 Object: Sample_x
+
+String informations (CIF term, value) :
+_pd_spec_description, Sample description
+_riet_thin_film_phase_refinement, automatic
+_reflectivity_layer_qc_from_phases, false
+
+Parameter informations :
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:_pd_spec_orientation_omega  Value: 0, minimum: 0.0, maximum: 0.0 Status: not refinable, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:_pd_spec_orientation_chi  Value: 0, minimum: 0.0, maximum: 0.0 Status: not refinable, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:_pd_spec_orientation_phi  Value: 0, minimum: 0.0, maximum: 0.0 Status: not refinable, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:_riet_par_spec_displac_x  Value: 0, minimum: 0.0, maximum: 0.0 Status: not refinable, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:_riet_par_spec_displac_y  Value: 0, minimum: 0.0, maximum: 0.0 Status: not refinable, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:_riet_par_spec_displac_z  Value: 0, minimum: 0.0, maximum: 0.0 Status: not refinable, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:_pd_spec_size_axial  Value: 0, minimum: 0.0, maximum: 100.0 Status: not refinable, only positive values permitted, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:_pd_spec_size_equat  Value: 0, minimum: 0.0, maximum: 100.0 Status: not refinable, only positive values permitted, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:_pd_spec_size_thick  Value: 0, minimum: 0.0, maximum: 100.0 Status: not refinable, only positive values permitted, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:_pd_spec_size_radius  Value: 0, minimum: 0.0, maximum: 100.0 Status: not refinable, only positive values permitted, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:_pd_spec_size_radius_y  Value: 0, minimum: 0.0, maximum: 100.0 Status: not refinable, only positive values permitted, minimum significant value: 0.0
+
+Subordinate objects :
+ Subordinate object number 0 :
+
+                 Object: No shape
+
+ Subordinate object number 1 :
+
+                 Object: None Layer workout
+
+ Subordinate object number 2 :
+
+                 Object: No precession
+
+
+Loops of subordinate objects :
+ Object loop number 0 :
+  Object number 0 :
+
+                 Object: Layer_x
+
+       AtomSite   fractions
+n  label  atom  fraction(at)  fraction(wt)
+1) Cs 0.19948141813135484 0.38710971046030057
+2) In 0.09974070906567742 0.16721840436688676
+3) Ag 0.08193105792526459 0.1290421195667437
+4) Cl 0.5984442543940645 0.3097809741222356
+5) Na 0.02040256048363871 0.006848791483833442
+
+String informations (CIF term, value) :
+_reflectivity_layer_qc_from_phases, false
+
+Parameter informations :
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:Layer_x:_riet_par_spec_layer_thickness  Value: 1.0E7, minimum: 0.1, maximum: 1.0E8 Status: not refinable, only positive values permitted, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:Layer_x:_reflectivity_layer_critical_qc  Value: 0.04, minimum: 0.001, maximum: 0.5 Status: not refinable, only positive values permitted, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:Layer_x:_reflectivity_layer_absorption  Value: 2.0E-7, minimum: 1.0E-8, maximum: 1.0E-5 Status: not refinable, only positive values permitted, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:Layer_x:_reflectivity_layer_roughness  Value: 2.0, minimum: 0.01, maximum: 100.0 Status: not refinable, only positive values permitted, minimum significant value: 0.0
+
+Parameter loop informations :
+Parameter loop number : 0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:Layer_x:_pd_phase_atom_%0  Value: 1.0, minimum: 0.0, maximum: 1.0 Status: not refinable, only positive values permitted, minimum significant value: 0.0
+
+
+
+ Object loop number 1 :
+  Object number 0 :
+
+                 Object: DataFileSet_x
+
+String informations (CIF term, value) :
+_pd_meas_datetime_initiated, Date/time meas
+_pd_meas_info_author_name, 
+_riet_meas_datafile_format, 
+_pd_proc_ls_background_function, 
+_pd_proc_ls_profile_function, 
+_pd_proc_ls_peak_cutoff, 30
+_pd_proc_2theta_range_min, 0
+_pd_proc_2theta_range_max, 0
+_pd_proc_2theta_range_inc, 
+_diffrn_ambient_pressure, 
+_diffrn_ambient_temperature, 
+_riet_lorentz_restricted, true
+_riet_par_background_interpolated, false
+_riet_par_background_interpolation_range, 150
+_riet_meas_dataset_compute, true
+_riet_meas_datafile_replace, false
+_riet_meas_dataset_random_texture, false
+_maud_background_add_automatic, false
+_maud_interpolated_background_iterations, 10
+_pd_proc_ls_datafile_weight, 1.0
+_riet_meas_dataset_no_strain, false
+
+Parameter informations :
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:DataFileSet_x:_riet_par_background_exp_shift  Value: 0, minimum: 0.0, maximum: 0.0 Status: not refinable, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:DataFileSet_x:_riet_par_background_exp_thermal_shift  Value: 0, minimum: 0.0, maximum: 0.0 Status: not refinable, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:DataFileSet_x:_pd_spec_orientation_omega  Value: 0, minimum: 0.0, maximum: 0.0 Status: not refinable, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:DataFileSet_x:_pd_spec_orientation_chi  Value: 0, minimum: 0.0, maximum: 0.0 Status: not refinable, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:DataFileSet_x:_pd_spec_orientation_phi  Value: 0, minimum: 0.0, maximum: 0.0 Status: not refinable, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:DataFileSet_x:_pd_meas_orientation_omega_offset  Value: 0, minimum: 0, maximum: 0 Status: not refinable, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:DataFileSet_x:_pd_meas_orientation_chi_offset  Value: 0, minimum: 0, maximum: 0 Status: not refinable, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:DataFileSet_x:_pd_meas_orientation_phi_offset  Value: 0, minimum: 0, maximum: 0 Status: not refinable, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:DataFileSet_x:_pd_meas_orientation_eta_offset  Value: 0, minimum: 0, maximum: 0 Status: not refinable, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:DataFileSet_x:_riet_par_spec_displac_x  Value: 0, minimum: 0.0, maximum: 0.0 Status: not refinable, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:DataFileSet_x:_riet_par_spec_displac_y  Value: 0, minimum: 0.0, maximum: 0.0 Status: not refinable, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:DataFileSet_x:_riet_par_spec_displac_z  Value: 0, minimum: 0.0, maximum: 0.0 Status: not refinable, minimum significant value: 0.0
+
+Parameter loop informations :
+Parameter loop number : 0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:DataFileSet_x:_riet_par_background_pol0  Value: 0.40696773, minimum: 0.0, maximum: 0.0 Status: refinable, error: +-0.021529125, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:DataFileSet_x:_riet_par_background_pol1  Value: 0.005761483, minimum: 0.0, maximum: 0.0020894038 Status: refinable, error: +-0.0012611051, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:DataFileSet_x:_riet_par_background_pol2  Value: -8.6586835E-5, minimum: 0.0, maximum: 0.0020894038 Status: refinable, error: +-1.6640475E-5, minimum significant value: 0.0
+
+
+Subordinate objects :
+ Subordinate object number 0 :
+
+                 Object: Le Bail
+
+String informations (CIF term, value) :
+_riet_lebail_iteration_max, 5
+_riet_lebail_error_max, 0.005
+_riet_lebail_range_factor, 0.05
+_riet_lebail_use_bkg, true
+_riet_lebail_use_hkl, false
+_riet_lebail_summation_delta, 1.0E-4
+
+ Subordinate object number 1 :
+
+                 Object: none pe
+
+ Subordinate object number 2 :
+
+                 Object: none reflectivity
+
+ Subordinate object number 3 :
+
+                 Object: Diffraction Instrument
+
+String informations (CIF term, value) :
+_diffrn_measurement_device_type, Diffraction Instrument
+_maud_optional_intensity_factor, 1.0
+
+Parameter informations :
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:DataFileSet_x:Diffraction Instrument:_pd_proc_intensity_incident  Value: 0.62467295, minimum: 0.0, maximum: 10000.0 Status: refinable, error: +-0.0019601109, only positive values permitted, minimum significant value: 0.0
+
+Parameter loop informations :
+
+Subordinate objects :
+ Subordinate object number 0 :
+
+                 Object: none cal
+
+ Subordinate object number 1 :
+
+                 Object: Instrument disalignment
+
+Parameter loop informations :
+Parameter loop number : 0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:DataFileSet_x:Diffraction Instrument:Instrument disalignment:_riet_par_2-theta_offset0  Value: -0.014242168, minimum: -0.1, maximum: 0.1 Status: refinable, error: +-6.871465E-4, minimum significant value: 0.0
+
+
+ Subordinate object number 2 :
+
+                 Object: Bragg-Brentano
+
+String informations (CIF term, value) :
+_diffrn_radiation_monochromator, filtered
+_pd_instr_2theta_monochr_post, 0
+_pd_instr_dist_src/samp, 175.0
+_pd_instr_monochr_pre_spec, filtered
+_pd_instr_2theta_monochr_pre, 0
+_pd_instr_divg_eq_src/samp, 0.0
+_pd_instr_divg_slit_auto, false
+_pd_instr_divg_ax_src/samp, 0.0
+
+Parameter informations :
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:DataFileSet_x:Diffraction Instrument:Bragg-Brentano:_diffrn_radiation_polarisn_norm  Value: 0, minimum: 0.0, maximum: 360.0 Status: not refinable, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:DataFileSet_x:Diffraction Instrument:Bragg-Brentano:_diffrn_radiation_polarisn_ratio  Value: 0, minimum: 0.0, maximum: 1.0 Status: not refinable, minimum significant value: 0.0
+
+ Subordinate object number 3 :
+
+                 Object: Theta-2Theta
+
+ Subordinate object number 4 :
+
+                 Object: X-ray tube
+
+String informations (CIF term, value) :
+_diffrn_dynamical_scattering_correction, true
+_diffrn_dynamical_scattering_correction_crystallite, false
+
+ Subordinate object number 5 :
+
+                 Object: Scintillation
+
+ Subordinate object number 6 :
+
+                 Object: Caglioti PV
+
+String informations (CIF term, value) :
+_riet_caglioti_d_dep, true
+_riet_asymmetry_tan_dep, true
+_riet_omega/chi_broadening_convoluted, false
+_riet_par_asymmetry_truncation, 1.0
+_riet_par_asymmetry_reciprocal, false
+
+Parameter loop informations :
+Parameter loop number : 0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:DataFileSet_x:Diffraction Instrument:Caglioti PV:_riet_par_asymmetry_value0  Value: 204.68237, minimum: 5.0, maximum: 1000.0 Status: refinable, error: +-319877.22, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:DataFileSet_x:Diffraction Instrument:Caglioti PV:_riet_par_asymmetry_value1  Value: 89.341835, minimum: -10.0, maximum: 195.47728 Status: refinable, error: +-21915.88, minimum significant value: 0.0
+
+Parameter loop number : 1
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:DataFileSet_x:Diffraction Instrument:Caglioti PV:_riet_par_caglioti_value0  Value: 0.007291789, minimum: -4.6471767, maximum: 0.1 Status: refinable, error: +-0.0011710055, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:DataFileSet_x:Diffraction Instrument:Caglioti PV:_riet_par_caglioti_value1  Value: -0.019408027, minimum: -0.3, maximum: 0.3 Status: refinable, error: +-0.008156073, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:DataFileSet_x:Diffraction Instrument:Caglioti PV:_riet_par_caglioti_value2  Value: 0.043190837, minimum: -0.5, maximum: 0.5 Status: refinable, error: +-0.009771041, minimum significant value: 0.0
+
+Parameter loop number : 2
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:DataFileSet_x:Diffraction Instrument:Caglioti PV:_riet_par_gaussian_value0  Value: -0.34117436, minimum: -1.0, maximum: 63.085 Status: refinable, error: +-0.08537278, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:DataFileSet_x:Diffraction Instrument:Caglioti PV:_riet_par_gaussian_value1  Value: 0.02405951, minimum: -0.1, maximum: 0.1 Status: refinable, error: +-0.0024253156, minimum significant value: 0.0
+
+Parameter loop number : 3
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:DataFileSet_x:Diffraction Instrument:Caglioti PV:_riet_par_broadening_omega0  Value: 0, minimum: -1.0, maximum: 1.0 Status: not refinable, minimum significant value: 0.0
+
+Parameter loop number : 10
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:DataFileSet_x:Diffraction Instrument:Caglioti PV:_riet_par_asymmetry_exp0  Value: 0, minimum: -0.9, maximum: 2.0 Status: not refinable, minimum significant value: 0.0
+
+
+ Subordinate object number 7 :
+
+                 Object: none abs
+
+
+Loops of subordinate objects :
+
+ Subordinate object number 4 :
+
+                 Object: none fluorescence
+
+ Subordinate object number 5 :
+
+                 Object: Basic diffraction
+
+
+Loops of subordinate objects :
+ Object loop number 2 :
+  Object number 0 :
+
+                 Object: A02_Cs2Na0.2Ag0.8InCl6 - cut.xy
+
+String informations (CIF term, value) :
+_riet_meas_datafile_format, 
+_pd_meas_angle_omega, 0
+_pd_meas_angle_chi, 0
+_pd_meas_angle_phi, 0
+_pd_meas_angle_eta, 0
+_pd_meas_angle_2theta, 0
+_pd_meas_energy_kev, 0
+_riet_meas_datafile_compute, true
+_riet_meas_datafile_fitting, false
+_pd_meas_detector_id, none
+_pd_meas_step_count_time, 1.0
+_pd_meas_units_of_intensity, counts
+_riet_meas_datafile_as_background, false
+_riet_meas_data_group_count, 1
+_riet_datafile_type, 0
+_riet_datafile_save_custom, 
+_pd_meas_image_id, -1
+_riet_background_interpolated_manual, false
+_pd_meas_datetime_initiated, 
+_pd_proc_ls_datafile_weight, 1.0
+_riet_use_count_time, false
+_riet_chebyshev_polynomial_background, 
+
+Parameter informations :
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:DataFileSet_x:A02_Cs2Na0.2Ag0.8InCl6 - cut.xy:_pd_meas_counts_monitor  Value: 1.0, minimum: 0.0, maximum: 10.0 Status: not refinable, only positive values permitted, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:DataFileSet_x:A02_Cs2Na0.2Ag0.8InCl6 - cut.xy:_riet_par_spec_displac_x_2R  Value: 0, minimum: -10.0, maximum: 10.0 Status: not refinable, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:DataFileSet_x:A02_Cs2Na0.2Ag0.8InCl6 - cut.xy:_riet_par_spec_displac_z_2R  Value: 0, minimum: -10.0, maximum: 10.0 Status: not refinable, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:DataFileSet_x:A02_Cs2Na0.2Ag0.8InCl6 - cut.xy:_riet_par_fluo_diffr_scale  Value: 1.0, minimum: 0.0, maximum: 100.0 Status: not refinable, only positive values permitted, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:DataFileSet_x:A02_Cs2Na0.2Ag0.8InCl6 - cut.xy:_rita_shape_abs_velocity_corr_factor  Value: 0, minimum: 0.0, maximum: 10000.0 Status: not refinable, only positive values permitted, minimum significant value: 0.0
+
+Parameter loop informations :
+
+
+
+
+ Object loop number 2 :
+  Object number 0 :
+
+                 Object: 1546186-Cs2AgInCl6
+
+       General position
+1)  +x  |  +y  |  +z
+2)  -y  |  +x  |  +z
+3)  -x  |  -y  |  +z
+4)  +y  |  -x  |  +z
+5)  +x  |  -z  |  +y
+6)  +x  |  -y  |  -z
+7)  +x  |  +z  |  -y
+8)  +z  |  +y  |  -x
+9)  -x  |  +y  |  -z
+10)  -z  |  +y  |  +x
+11)  +z  |  +x  |  +y
+12)  +y  |  +z  |  +x
+13)  -y  |  -z  |  +x
+14)  +z  |  -x  |  -y
+15)  -y  |  +z  |  -x
+16)  -z  |  -x  |  +y
+17)  -z  |  +x  |  -y
+18)  +y  |  -z  |  -x
+19)  +y  |  +x  |  -z
+20)  -y  |  -x  |  -z
+21)  -x  |  +z  |  +y
+22)  -x  |  -z  |  -y
+23)  +z  |  -y  |  +x
+24)  -z  |  -y  |  -x
+25)  -x  |  -y  |  -z
+26)  +y  |  -x  |  -z
+27)  +x  |  +y  |  -z
+28)  -y  |  +x  |  -z
+29)  -x  |  +z  |  -y
+30)  -x  |  +y  |  +z
+31)  -x  |  -z  |  +y
+32)  -z  |  -y  |  +x
+33)  +x  |  -y  |  +z
+34)  +z  |  -y  |  -x
+35)  -z  |  -x  |  -y
+36)  -y  |  -z  |  -x
+37)  +y  |  +z  |  -x
+38)  -z  |  +x  |  +y
+39)  +y  |  -z  |  +x
+40)  +z  |  +x  |  -y
+41)  +z  |  -x  |  +y
+42)  -y  |  +z  |  +x
+43)  -y  |  -x  |  +z
+44)  +y  |  +x  |  +z
+45)  +x  |  -z  |  -y
+46)  +x  |  +z  |  +y
+47)  -z  |  +y  |  -x
+48)  +z  |  +y  |  +x
+49)  +x  |  +y+0.5  |  +z+0.5
+50)  -y  |  +x+0.5  |  +z+0.5
+51)  -x  |  -y+0.5  |  +z+0.5
+52)  +y  |  -x+0.5  |  +z+0.5
+53)  +x  |  -z+0.5  |  +y+0.5
+54)  +x  |  -y+0.5  |  -z+0.5
+55)  +x  |  +z+0.5  |  -y+0.5
+56)  +z  |  +y+0.5  |  -x+0.5
+57)  -x  |  +y+0.5  |  -z+0.5
+58)  -z  |  +y+0.5  |  +x+0.5
+59)  +z  |  +x+0.5  |  +y+0.5
+60)  +y  |  +z+0.5  |  +x+0.5
+61)  -y  |  -z+0.5  |  +x+0.5
+62)  +z  |  -x+0.5  |  -y+0.5
+63)  -y  |  +z+0.5  |  -x+0.5
+64)  -z  |  -x+0.5  |  +y+0.5
+65)  -z  |  +x+0.5  |  -y+0.5
+66)  +y  |  -z+0.5  |  -x+0.5
+67)  +y  |  +x+0.5  |  -z+0.5
+68)  -y  |  -x+0.5  |  -z+0.5
+69)  -x  |  +z+0.5  |  +y+0.5
+70)  -x  |  -z+0.5  |  -y+0.5
+71)  +z  |  -y+0.5  |  +x+0.5
+72)  -z  |  -y+0.5  |  -x+0.5
+73)  -x  |  -y+0.5  |  -z+0.5
+74)  +y  |  -x+0.5  |  -z+0.5
+75)  +x  |  +y+0.5  |  -z+0.5
+76)  -y  |  +x+0.5  |  -z+0.5
+77)  -x  |  +z+0.5  |  -y+0.5
+78)  -x  |  +y+0.5  |  +z+0.5
+79)  -x  |  -z+0.5  |  +y+0.5
+80)  -z  |  -y+0.5  |  +x+0.5
+81)  +x  |  -y+0.5  |  +z+0.5
+82)  +z  |  -y+0.5  |  -x+0.5
+83)  -z  |  -x+0.5  |  -y+0.5
+84)  -y  |  -z+0.5  |  -x+0.5
+85)  +y  |  +z+0.5  |  -x+0.5
+86)  -z  |  +x+0.5  |  +y+0.5
+87)  +y  |  -z+0.5  |  +x+0.5
+88)  +z  |  +x+0.5  |  -y+0.5
+89)  +z  |  -x+0.5  |  +y+0.5
+90)  -y  |  +z+0.5  |  +x+0.5
+91)  -y  |  -x+0.5  |  +z+0.5
+92)  +y  |  +x+0.5  |  +z+0.5
+93)  +x  |  -z+0.5  |  -y+0.5
+94)  +x  |  +z+0.5  |  +y+0.5
+95)  -z  |  +y+0.5  |  -x+0.5
+96)  +z  |  +y+0.5  |  +x+0.5
+97)  +x+0.5  |  +y  |  +z+0.5
+98)  -y+0.5  |  +x  |  +z+0.5
+99)  -x+0.5  |  -y  |  +z+0.5
+100)  +y+0.5  |  -x  |  +z+0.5
+101)  +x+0.5  |  -z  |  +y+0.5
+102)  +x+0.5  |  -y  |  -z+0.5
+103)  +x+0.5  |  +z  |  -y+0.5
+104)  +z+0.5  |  +y  |  -x+0.5
+105)  -x+0.5  |  +y  |  -z+0.5
+106)  -z+0.5  |  +y  |  +x+0.5
+107)  +z+0.5  |  +x  |  +y+0.5
+108)  +y+0.5  |  +z  |  +x+0.5
+109)  -y+0.5  |  -z  |  +x+0.5
+110)  +z+0.5  |  -x  |  -y+0.5
+111)  -y+0.5  |  +z  |  -x+0.5
+112)  -z+0.5  |  -x  |  +y+0.5
+113)  -z+0.5  |  +x  |  -y+0.5
+114)  +y+0.5  |  -z  |  -x+0.5
+115)  +y+0.5  |  +x  |  -z+0.5
+116)  -y+0.5  |  -x  |  -z+0.5
+117)  -x+0.5  |  +z  |  +y+0.5
+118)  -x+0.5  |  -z  |  -y+0.5
+119)  +z+0.5  |  -y  |  +x+0.5
+120)  -z+0.5  |  -y  |  -x+0.5
+121)  -x+0.5  |  -y  |  -z+0.5
+122)  +y+0.5  |  -x  |  -z+0.5
+123)  +x+0.5  |  +y  |  -z+0.5
+124)  -y+0.5  |  +x  |  -z+0.5
+125)  -x+0.5  |  +z  |  -y+0.5
+126)  -x+0.5  |  +y  |  +z+0.5
+127)  -x+0.5  |  -z  |  +y+0.5
+128)  -z+0.5  |  -y  |  +x+0.5
+129)  +x+0.5  |  -y  |  +z+0.5
+130)  +z+0.5  |  -y  |  -x+0.5
+131)  -z+0.5  |  -x  |  -y+0.5
+132)  -y+0.5  |  -z  |  -x+0.5
+133)  +y+0.5  |  +z  |  -x+0.5
+134)  -z+0.5  |  +x  |  +y+0.5
+135)  +y+0.5  |  -z  |  +x+0.5
+136)  +z+0.5  |  +x  |  -y+0.5
+137)  +z+0.5  |  -x  |  +y+0.5
+138)  -y+0.5  |  +z  |  +x+0.5
+139)  -y+0.5  |  -x  |  +z+0.5
+140)  +y+0.5  |  +x  |  +z+0.5
+141)  +x+0.5  |  -z  |  -y+0.5
+142)  +x+0.5  |  +z  |  +y+0.5
+143)  -z+0.5  |  +y  |  -x+0.5
+144)  +z+0.5  |  +y  |  +x+0.5
+145)  +x+0.5  |  +y+0.5  |  +z
+146)  -y+0.5  |  +x+0.5  |  +z
+147)  -x+0.5  |  -y+0.5  |  +z
+148)  +y+0.5  |  -x+0.5  |  +z
+149)  +x+0.5  |  -z+0.5  |  +y
+150)  +x+0.5  |  -y+0.5  |  -z
+151)  +x+0.5  |  +z+0.5  |  -y
+152)  +z+0.5  |  +y+0.5  |  -x
+153)  -x+0.5  |  +y+0.5  |  -z
+154)  -z+0.5  |  +y+0.5  |  +x
+155)  +z+0.5  |  +x+0.5  |  +y
+156)  +y+0.5  |  +z+0.5  |  +x
+157)  -y+0.5  |  -z+0.5  |  +x
+158)  +z+0.5  |  -x+0.5  |  -y
+159)  -y+0.5  |  +z+0.5  |  -x
+160)  -z+0.5  |  -x+0.5  |  +y
+161)  -z+0.5  |  +x+0.5  |  -y
+162)  +y+0.5  |  -z+0.5  |  -x
+163)  +y+0.5  |  +x+0.5  |  -z
+164)  -y+0.5  |  -x+0.5  |  -z
+165)  -x+0.5  |  +z+0.5  |  +y
+166)  -x+0.5  |  -z+0.5  |  -y
+167)  +z+0.5  |  -y+0.5  |  +x
+168)  -z+0.5  |  -y+0.5  |  -x
+169)  -x+0.5  |  -y+0.5  |  -z
+170)  +y+0.5  |  -x+0.5  |  -z
+171)  +x+0.5  |  +y+0.5  |  -z
+172)  -y+0.5  |  +x+0.5  |  -z
+173)  -x+0.5  |  +z+0.5  |  -y
+174)  -x+0.5  |  +y+0.5  |  +z
+175)  -x+0.5  |  -z+0.5  |  +y
+176)  -z+0.5  |  -y+0.5  |  +x
+177)  +x+0.5  |  -y+0.5  |  +z
+178)  +z+0.5  |  -y+0.5  |  -x
+179)  -z+0.5  |  -x+0.5  |  -y
+180)  -y+0.5  |  -z+0.5  |  -x
+181)  +y+0.5  |  +z+0.5  |  -x
+182)  -z+0.5  |  +x+0.5  |  +y
+183)  +y+0.5  |  -z+0.5  |  +x
+184)  +z+0.5  |  +x+0.5  |  -y
+185)  +z+0.5  |  -x+0.5  |  +y
+186)  -y+0.5  |  +z+0.5  |  +x
+187)  -y+0.5  |  -x+0.5  |  +z
+188)  +y+0.5  |  +x+0.5  |  +z
+189)  +x+0.5  |  -z+0.5  |  -y
+190)  +x+0.5  |  +z+0.5  |  +y
+191)  -z+0.5  |  +y+0.5  |  -x
+192)  +z+0.5  |  +y+0.5  |  +x
+
+       AtomSite list
+n  label  symbol  quantity  occupancy  x  y  z  multiplicity  B  radius  weight  neutron scattering  neutron absorption
+1)  Cs 8.0 1.0 0.2500 0.2500 0.2500 8 -3.65022 2.71 132.905
+
+2)  In 4.0 1.0 0 0 0 4 22.303236 1.66 114.821
+
+3)  Ag 4.0 0.8214405 0.5000 0 0 4 2.428026 1.44 107.868
+
+4)  Cl 24.0 1.0 0.23979 0 0 24 4.2438703 1.62 35.452
+
+5)  Na 4.0 0.204556 0.5 0 0 4 9.219462 1.91 22.99
+
+
+       Atomic fractions
+n  label  atomic fraction
+1) Cs 0.19948141813135484
+2) In 0.09974070906567742
+3) Ag 0.08193105792526459
+4) Cl 0.5984442543940645
+5) Na 0.02040256048363871
+
+       Reflection list
+n  h  k  l  multiplicity  d-space  crystallite(Angstrom)  microstrain
+1)  1 1 1 8 6.056266337084838 
+2)  2 0 0 6 5.2448805 
+3)  2 2 0 12 3.70869056806309 
+4)  3 1 1 24 3.1627819434093865 
+5)  2 2 2 8 3.028133168542419 
+6)  4 0 0 6 2.62244025 
+7)  3 3 1 24 2.406516217941798 
+8)  4 2 0 24 2.3455818663726173 
+9)  4 2 2 24 2.141213497812251 
+10)  5 1 1 24 2.0187554456949464 
+11)  3 3 3 8 2.018755445694946 
+12)  4 4 0 12 1.854345284031545 
+13)  5 3 1 48 1.773093228047052 
+14)  4 4 2 24 1.7482935 
+15)  6 0 0 6 1.7482935 
+16)  6 2 0 24 1.6585768435402761 
+17)  5 3 3 24 1.5996735556307138 
+18)  6 2 2 24 1.5813909717046932 
+19)  4 4 4 8 1.5140665842712095 
+20)  5 5 1 24 1.4688603414513743 
+21)  7 1 1 24 1.4688603414513741 
+22)  6 4 0 24 1.4546681212639392 
+23)  6 4 2 48 1.4017532761122575 
+24)  5 5 3 24 1.3656505610391179 
+25)  7 3 1 48 1.3656505610391179 
+
+String informations (CIF term, value) :
+_chemical_name_common, 1546186-Cs2AgInCl6
+_chemical_formula_sum, Ag Cl6 Cs2 In
+_symmetry_cell_setting, cubic
+_symmetry_Int_Tables_number, 1
+_symmetry_space_group_name_sch, C1^1
+_symmetry_space_group_name_H-M, Fm-3m
+_symmetry_space_group_name_Hall, P1
+_cell_formula_units_Z, 4
+_refine_ls_d_res_low, 0
+_refine_ls_d_res_high, 5000
+_reflns_d_resolution_low, 0.7
+_reflns_d_resolution_high, 50
+_maud_sg_centering_type, P
+_chemical_name_mineral, Unknown
+_chemical_name_systematic, Unknown
+
+Loop of string informations (CIF term, value) :
+
+Parameter informations :
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:1546186-Cs2AgInCl6:_cell_length_a  Value: 10.489761, minimum: 5.0, maximum: 30.0 Status: refinable, error: +-2.2045789E-4, only positive values permitted, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:1546186-Cs2AgInCl6:_cell_length_b  Value: 10.489761, minimum: 5.0, maximum: 30.0 Status: refinable, error: +-11.0, only positive values permitted, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:1546186-Cs2AgInCl6:_cell_length_c  Value: 10.489761, minimum: 5.0, maximum: 30.0 Status: refinable, error: +-11.0, only positive values permitted, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:1546186-Cs2AgInCl6:_cell_angle_alpha  Value: 90.00, minimum: 90.0, maximum: 120.0 Status: not refinable, only positive values permitted, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:1546186-Cs2AgInCl6:_cell_angle_beta  Value: 90.00, minimum: 90.0, maximum: 120.0 Status: not refinable, only positive values permitted, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:1546186-Cs2AgInCl6:_cell_angle_gamma  Value: 90.00, minimum: 90.0, maximum: 120.0 Status: not refinable, only positive values permitted, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:1546186-Cs2AgInCl6:_riet_par_strain_thermal  Value: 0, minimum: -0.1, maximum: 0.1 Status: not refinable, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:1546186-Cs2AgInCl6:_exptl_absorpt_cryst_size  Value: 0, minimum: 0.001, maximum: 100.0 Status: not refinable, only positive values permitted, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:1546186-Cs2AgInCl6:_riet_par_phase_scale_factor  Value: 1.0, minimum: 0.0, maximum: 100.0 Status: not refinable, only positive values permitted, minimum significant value: 0.0
+
+Subordinate objects :
+ Subordinate object number 0 :
+
+                 Object: none tex
+
+ Subordinate object number 1 :
+
+                 Object: Delft
+
+ Subordinate object number 2 :
+
+                 Object: Isotropic
+
+Parameter informations :
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:1546186-Cs2AgInCl6:Isotropic:_riet_par_cryst_size  Value: 3225.2312, minimum: 50.0, maximum: 5000.0 Status: refinable, error: +-289.6308, only positive values permitted, minimum significant value: 5.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:1546186-Cs2AgInCl6:Isotropic:_riet_par_rs_microstrain  Value: 4.4888683E-4, minimum: 0.0, maximum: 0.005 Status: refinable, error: +-4.0945622E-5, only positive values permitted, minimum significant value: 1.0E-4
+
+ Subordinate object number 3 :
+
+                 Object: none abm
+
+ Subordinate object number 4 :
+
+                 Object: none pd
+
+ Subordinate object number 5 :
+
+                 Object: no magnetic
+
+ Subordinate object number 6 :
+
+                 Object: no strain
+
+ Subordinate object number 7 :
+
+                 Object: No microabsorption
+
+ Subordinate object number 8 :
+
+                 Object: Atomic Structure
+
+String informations (CIF term, value) :
+_riet_structure_quantity_from_occupancy, true
+_refine_ls_energy_weight, 1.0
+_riet_structure_use_U_dimensionless, false
+
+Subordinate objects :
+ Subordinate object number 0 :
+
+                 Object: No force field
+
+
+Loops of subordinate objects :
+ Object loop number 0 :
+  Object number 0 :
+
+                 Object: Cs
+
+String informations (CIF term, value) :
+_atom_site_type_symbol, dummy
+_atom_site_constraints, 
+_atom_type_number_in_cell, 8.0
+_atom_site_calc_flag, .
+
+Parameter informations :
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:1546186-Cs2AgInCl6:Atomic Structure:Cs:_atom_site_occupancy  Value: 1, minimum: 0.0, maximum: 1.0 Status: not refinable, only positive values permitted, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:1546186-Cs2AgInCl6:Atomic Structure:Cs:_atom_site_fract_x  Value: 0.2500, minimum: 0.0, maximum: 1.0 Status: not refinable, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:1546186-Cs2AgInCl6:Atomic Structure:Cs:_atom_site_fract_y  Value: 0.2500, minimum: 0.0, maximum: 1.0 Status: not refinable, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:1546186-Cs2AgInCl6:Atomic Structure:Cs:_atom_site_fract_z  Value: 0.2500, minimum: 0.0, maximum: 1.0 Status: not refinable, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:1546186-Cs2AgInCl6:Atomic Structure:Cs:_atom_site_B_iso_or_equiv  Value: -3.65022, minimum: -1.0, maximum: 10.0 Status: not refinable, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:1546186-Cs2AgInCl6:Atomic Structure:Cs:_atom_site_aniso_B_11  Value: 0.040532537, minimum: -1.0, maximum: 10.0 Status: not refinable, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:1546186-Cs2AgInCl6:Atomic Structure:Cs:_atom_site_aniso_B_22  Value: 0.19112895, minimum: -1.0, maximum: 10.0 Status: not refinable, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:1546186-Cs2AgInCl6:Atomic Structure:Cs:_atom_site_aniso_B_33  Value: 0.19261457, minimum: -1.0, maximum: 10.0 Status: not refinable, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:1546186-Cs2AgInCl6:Atomic Structure:Cs:_atom_site_aniso_B_12  Value: -0.057589516, minimum: -1.0, maximum: 10.0 Status: not refinable, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:1546186-Cs2AgInCl6:Atomic Structure:Cs:_atom_site_aniso_B_13  Value: 0.05333933, minimum: -1.0, maximum: 10.0 Status: not refinable, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:1546186-Cs2AgInCl6:Atomic Structure:Cs:_atom_site_aniso_B_23  Value: -0.1787792, minimum: -1.0, maximum: 10.0 Status: not refinable, minimum significant value: 0.0
+
+  Object number 1 :
+
+                 Object: In
+
+String informations (CIF term, value) :
+_atom_site_type_symbol, dummy
+_atom_site_constraints, 
+_atom_type_number_in_cell, 4.0
+_atom_site_calc_flag, .
+
+Parameter informations :
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:1546186-Cs2AgInCl6:Atomic Structure:In:_atom_site_occupancy  Value: 1, minimum: 0.0, maximum: 1.0 Status: not refinable, only positive values permitted, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:1546186-Cs2AgInCl6:Atomic Structure:In:_atom_site_fract_x  Value: 0, minimum: 0.0, maximum: 1.0 Status: not refinable, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:1546186-Cs2AgInCl6:Atomic Structure:In:_atom_site_fract_y  Value: 0, minimum: 0.0, maximum: 1.0 Status: not refinable, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:1546186-Cs2AgInCl6:Atomic Structure:In:_atom_site_fract_z  Value: 0, minimum: 0.0, maximum: 1.0 Status: not refinable, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:1546186-Cs2AgInCl6:Atomic Structure:In:_atom_site_B_iso_or_equiv  Value: 22.303236, minimum: -1.0, maximum: 10.0 Status: not refinable, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:1546186-Cs2AgInCl6:Atomic Structure:In:_atom_site_aniso_B_11  Value: 0.042757615, minimum: -1.0, maximum: 10.0 Status: not refinable, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:1546186-Cs2AgInCl6:Atomic Structure:In:_atom_site_aniso_B_22  Value: 0.19530874, minimum: -1.0, maximum: 10.0 Status: not refinable, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:1546186-Cs2AgInCl6:Atomic Structure:In:_atom_site_aniso_B_33  Value: 0.25839674, minimum: -1.0, maximum: 10.0 Status: not refinable, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:1546186-Cs2AgInCl6:Atomic Structure:In:_atom_site_aniso_B_12  Value: -0.121007524, minimum: -1.0, maximum: 10.0 Status: not refinable, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:1546186-Cs2AgInCl6:Atomic Structure:In:_atom_site_aniso_B_13  Value: 0.02830929, minimum: -1.0, maximum: 10.0 Status: not refinable, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:1546186-Cs2AgInCl6:Atomic Structure:In:_atom_site_aniso_B_23  Value: -0.19242534, minimum: -1.0, maximum: 10.0 Status: not refinable, minimum significant value: 0.0
+
+  Object number 2 :
+
+                 Object: Ag
+
+String informations (CIF term, value) :
+_atom_site_type_symbol, dummy
+_atom_site_constraints, 
+_atom_type_number_in_cell, 4.0
+_atom_site_calc_flag, .
+
+Parameter informations :
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:1546186-Cs2AgInCl6:Atomic Structure:Ag:_atom_site_occupancy  Value: 0.8214405, minimum: 0.0, maximum: 1.0 Status: refinable, error: +-0.0029934165, only positive values permitted, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:1546186-Cs2AgInCl6:Atomic Structure:Ag:_atom_site_fract_x  Value: 0.5000, minimum: 0.0, maximum: 1.0 Status: not refinable, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:1546186-Cs2AgInCl6:Atomic Structure:Ag:_atom_site_fract_y  Value: 0, minimum: 0.0, maximum: 1.0 Status: not refinable, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:1546186-Cs2AgInCl6:Atomic Structure:Ag:_atom_site_fract_z  Value: 0, minimum: 0.0, maximum: 1.0 Status: not refinable, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:1546186-Cs2AgInCl6:Atomic Structure:Ag:_atom_site_B_iso_or_equiv  Value: 2.428026, minimum: -1.0, maximum: 10.0 Status: not refinable, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:1546186-Cs2AgInCl6:Atomic Structure:Ag:_atom_site_aniso_B_11  Value: 0.004325507, minimum: -1.0, maximum: 10.0 Status: not refinable, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:1546186-Cs2AgInCl6:Atomic Structure:Ag:_atom_site_aniso_B_22  Value: -0.01980147, minimum: -1.0, maximum: 10.0 Status: not refinable, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:1546186-Cs2AgInCl6:Atomic Structure:Ag:_atom_site_aniso_B_33  Value: 0.1080937, minimum: -1.0, maximum: 10.0 Status: not refinable, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:1546186-Cs2AgInCl6:Atomic Structure:Ag:_atom_site_aniso_B_12  Value: 0.009410287, minimum: -1.0, maximum: 10.0 Status: not refinable, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:1546186-Cs2AgInCl6:Atomic Structure:Ag:_atom_site_aniso_B_13  Value: -0.036972176, minimum: -1.0, maximum: 10.0 Status: not refinable, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:1546186-Cs2AgInCl6:Atomic Structure:Ag:_atom_site_aniso_B_23  Value: 0.030900383, minimum: -1.0, maximum: 10.0 Status: not refinable, minimum significant value: 0.0
+
+  Object number 3 :
+
+                 Object: Cl
+
+String informations (CIF term, value) :
+_atom_site_type_symbol, dummy
+_atom_site_constraints, 
+_atom_type_number_in_cell, 24.0
+_atom_site_calc_flag, .
+
+Parameter informations :
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:1546186-Cs2AgInCl6:Atomic Structure:Cl:_atom_site_occupancy  Value: 1, minimum: 0.0, maximum: 1.0 Status: not refinable, only positive values permitted, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:1546186-Cs2AgInCl6:Atomic Structure:Cl:_atom_site_fract_x  Value: 0.23979, minimum: 0.0, maximum: 1.0 Status: not refinable, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:1546186-Cs2AgInCl6:Atomic Structure:Cl:_atom_site_fract_y  Value: 0, minimum: 0.0, maximum: 1.0 Status: not refinable, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:1546186-Cs2AgInCl6:Atomic Structure:Cl:_atom_site_fract_z  Value: 0, minimum: 0.0, maximum: 1.0 Status: not refinable, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:1546186-Cs2AgInCl6:Atomic Structure:Cl:_atom_site_B_iso_or_equiv  Value: 4.2438703, minimum: -1.0, maximum: 10.0 Status: not refinable, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:1546186-Cs2AgInCl6:Atomic Structure:Cl:_atom_site_aniso_B_11  Value: 0.01257797, minimum: -1.0, maximum: 10.0 Status: not refinable, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:1546186-Cs2AgInCl6:Atomic Structure:Cl:_atom_site_aniso_B_22  Value: -0.0059706275, minimum: -1.0, maximum: 10.0 Status: not refinable, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:1546186-Cs2AgInCl6:Atomic Structure:Cl:_atom_site_aniso_B_33  Value: 0.07567123, minimum: -1.0, maximum: 10.0 Status: not refinable, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:1546186-Cs2AgInCl6:Atomic Structure:Cl:_atom_site_aniso_B_12  Value: -0.012531981, minimum: -1.0, maximum: 10.0 Status: not refinable, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:1546186-Cs2AgInCl6:Atomic Structure:Cl:_atom_site_aniso_B_13  Value: -0.017342472, minimum: -1.0, maximum: 10.0 Status: not refinable, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:1546186-Cs2AgInCl6:Atomic Structure:Cl:_atom_site_aniso_B_23  Value: 0.026939686, minimum: -1.0, maximum: 10.0 Status: not refinable, minimum significant value: 0.0
+
+  Object number 4 :
+
+                 Object: Na
+
+String informations (CIF term, value) :
+_atom_site_type_symbol, dummy
+_atom_site_constraints, 
+_atom_type_number_in_cell, 4.0
+_atom_site_calc_flag, .
+
+Parameter informations :
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:1546186-Cs2AgInCl6:Atomic Structure:Na:_atom_site_occupancy  Value: 0.204556, minimum: 0.0, maximum: 1.0 Status: refinable, error: +-0.0046006115, only positive values permitted, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:1546186-Cs2AgInCl6:Atomic Structure:Na:_atom_site_fract_x  Value: 0.5, minimum: 0.0, maximum: 1.0 Status: not refinable, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:1546186-Cs2AgInCl6:Atomic Structure:Na:_atom_site_fract_y  Value: 0, minimum: 0.0, maximum: 1.0 Status: not refinable, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:1546186-Cs2AgInCl6:Atomic Structure:Na:_atom_site_fract_z  Value: 0, minimum: 0.0, maximum: 1.0 Status: not refinable, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:1546186-Cs2AgInCl6:Atomic Structure:Na:_atom_site_B_iso_or_equiv  Value: 9.219462, minimum: -1.0, maximum: 10.0 Status: not refinable, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:1546186-Cs2AgInCl6:Atomic Structure:Na:_atom_site_aniso_B_11  Value: 2.031604, minimum: -1.0, maximum: 10.0 Status: not refinable, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:1546186-Cs2AgInCl6:Atomic Structure:Na:_atom_site_aniso_B_22  Value: 0.62865067, minimum: -1.0, maximum: 10.0 Status: not refinable, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:1546186-Cs2AgInCl6:Atomic Structure:Na:_atom_site_aniso_B_33  Value: 0.1321565, minimum: -1.0, maximum: 10.0 Status: not refinable, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:1546186-Cs2AgInCl6:Atomic Structure:Na:_atom_site_aniso_B_12  Value: 0.277752, minimum: -1.0, maximum: 10.0 Status: not refinable, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:1546186-Cs2AgInCl6:Atomic Structure:Na:_atom_site_aniso_B_13  Value: -1.4918629, minimum: -1.0, maximum: 10.0 Status: not refinable, minimum significant value: 0.0
+- Parameter:  A02_Cs2Na0.2Ag0.8InCl6.par:Sample_x:1546186-Cs2AgInCl6:Atomic Structure:Na:_atom_site_aniso_B_23  Value: -0.3131456, minimum: -1.0, maximum: 10.0 Status: not refinable, minimum significant value: 0.0
+
+
+
+ Subordinate object number 9 :
+
+                 Object: atomic standard model
+
+ Subordinate object number 10 :
+
+                 Object: Le Bail
+
+String informations (CIF term, value) :
+_riet_lebail_iteration_max, 5
+_riet_lebail_error_max, 0.005
+_riet_lebail_range_factor, 0.05
+_riet_lebail_use_bkg, true
+_riet_lebail_summation_delta, 1.0E-4
+_riet_lebail_use_previous_factors, true
+
+ Subordinate object number 11 :
+
+                 Object: None TDS
+
+
+Loops of subordinate objects :
+
+
+
+
+
