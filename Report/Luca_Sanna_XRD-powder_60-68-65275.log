@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.2) (preloaded format=pdflatex 2025.3.6)  6 DEC 2025 01:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.2) (preloaded format=pdflatex 2025.3.6)  6 DEC 2025 15:01
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -926,7 +926,7 @@ File: uesint.fd
 File: ../Bragg.png Graphic file (type png)
 <use ../Bragg.png>
 Package pdftex.def Info: ../Bragg.png  used on input line 75.
-(pdftex.def)             Requested size: 236.84842pt x 188.66313pt.
+(pdftex.def)             Requested size: 189.47945pt x 150.93051pt.
 
 
 
@@ -942,14 +942,14 @@ Package pdftex.def Info: ../Bragg-Brentano.png  used on input line 104.
 (pdftex.def)             Requested size: 236.84842pt x 134.95453pt.
 
 
-
-
-[2 <../Bragg-Brentano.png>]
-<../Datasets/A01_Cs2AgInCl6.pdf, id=60, 1339.28639pt x 992.67897pt>
+<../Datasets/A01_Cs2AgInCl6.pdf, id=41, 1339.28639pt x 992.67897pt>
 File: ../Datasets/A01_Cs2AgInCl6.pdf Graphic file (type pdf)
 <use ../Datasets/A01_Cs2AgInCl6.pdf>
 Package pdftex.def Info: ../Datasets/A01_Cs2AgInCl6.pdf  used on input line 131.
 (pdftex.def)             Requested size: 236.84842pt x 175.53906pt.
+
+
+[2 <../Bragg-Brentano.png>]
 <../Datasets/A10_Cs2NaInCl6.pdf, id=61, 1339.28639pt x 992.67897pt>
 File: ../Datasets/A10_Cs2NaInCl6.pdf Graphic file (type pdf)
 <use ../Datasets/A10_Cs2NaInCl6.pdf>
@@ -957,27 +957,38 @@ Package pdftex.def Info: ../Datasets/A10_Cs2NaInCl6.pdf  used on input line 137.
 (pdftex.def)             Requested size: 236.84842pt x 175.53906pt.
 
 
-<../Datasets/A02_Cs2Na0.2Ag0.8InCl6.pdf, id=65, 1339.28639pt x 992.67897pt>
+
+
+[3 <../Datasets/A01_Cs2AgInCl6.pdf> <../Datasets/A10_Cs2NaInCl6.pdf>]
+<../Datasets/A02_Cs2Na0.2Ag0.8InCl6.pdf, id=226, 1339.28639pt x 992.67897pt>
 File: ../Datasets/A02_Cs2Na0.2Ag0.8InCl6.pdf Graphic file (type pdf)
 <use ../Datasets/A02_Cs2Na0.2Ag0.8InCl6.pdf>
-Package pdftex.def Info: ../Datasets/A02_Cs2Na0.2Ag0.8InCl6.pdf  used on input line 155.
+Package pdftex.def Info: ../Datasets/A02_Cs2Na0.2Ag0.8InCl6.pdf  used on input line 180.
 (pdftex.def)             Requested size: 236.84842pt x 175.53906pt.
-<../Datasets/A04_Cs2Na0.6Ag0.4InCl6.pdf, id=66, 1339.28639pt x 992.67897pt>
+<../Datasets/A04_Cs2Na0.6Ag0.4InCl6.pdf, id=227, 1339.28639pt x 992.67897pt>
 File: ../Datasets/A04_Cs2Na0.6Ag0.4InCl6.pdf Graphic file (type pdf)
 <use ../Datasets/A04_Cs2Na0.6Ag0.4InCl6.pdf>
-Package pdftex.def Info: ../Datasets/A04_Cs2Na0.6Ag0.4InCl6.pdf  used on input line 162.
+Package pdftex.def Info: ../Datasets/A04_Cs2Na0.6Ag0.4InCl6.pdf  used on input line 187.
 (pdftex.def)             Requested size: 236.84842pt x 175.53906pt.
 
 
-[3 <../Datasets/A01_Cs2AgInCl6.pdf> <../Datasets/A10_Cs2NaInCl6.pdf> <../Datasets/A02_Cs2Na0.2Ag0.8InCl6.pdf> <../Datasets/A04_Cs2Na0.6Ag0.4InCl6.pdf>]
 
-[4
+
+[4 <../Datasets/A02_Cs2Na0.2Ag0.8InCl6.pdf> <../Datasets/A04_Cs2Na0.6Ag0.4InCl6.pdf>]
+
+
+
+[5
+
+]
+
+[6
 
 ]
 
 
 
-[5
+[7
 
 
 ] (Luca_Sanna_XRD-powder_60-68-65275.aux)
@@ -992,17 +1003,17 @@ Package logreq Info: Writing requests to 'Luca_Sanna_XRD-powder_60-68-65275.run.
 
  ) 
 Here is how much of TeX's memory you used:
- 26991 strings out of 473523
- 534791 string characters out of 5714631
- 1371980 words of memory out of 5000000
- 49862 multiletter control sequences out of 15000+600000
- 580505 words of font info for 98 fonts, out of 8000000 for 9000
+ 27025 strings out of 473523
+ 535285 string characters out of 5714631
+ 1372776 words of memory out of 5000000
+ 49881 multiletter control sequences out of 15000+600000
+ 583822 words of font info for 106 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 76i,9n,80p,1201b,1817s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\lucas\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1200.pk> <C:\Users\lucas\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1200.pk> <C:\Users\lucas\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\lucas\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1200.pk> <C:\Users\lucas\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\lucas\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\lucas\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\lucas\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\lucas\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\lucas\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk> <C:\Users\lucas\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\lucas\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2074.pk><C:/Users/lucas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/lucas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/lucas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/lucas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/lucas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/lucas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/lucas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/lucas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/lucas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/lucas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/lucas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/lucas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/lucas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on Luca_Sanna_XRD-powder_60-68-65275.pdf (5 pages, 709896 bytes).
+ 76i,12n,80p,1201b,1817s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\lucas\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1200.pk> <C:\Users\lucas\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1200.pk> <C:\Users\lucas\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1000.pk> <C:\Users\lucas\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\lucas\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\lucas\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1200.pk> <C:\Users\lucas\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\lucas\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\lucas\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\lucas\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\lucas\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\lucas\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk> <C:\Users\lucas\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\lucas\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2074.pk><C:/Users/lucas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/lucas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Users/lucas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/lucas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/lucas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/lucas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/lucas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/lucas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/lucas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/lucas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/lucas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/lucas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/lucas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/lucas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/lucas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/lucas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/lucas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on Luca_Sanna_XRD-powder_60-68-65275.pdf (7 pages, 776027 bytes).
 PDF statistics:
- 780 PDF objects out of 1000 (max. 8388607)
- 25 named destinations out of 1000 (max. 500000)
+ 880 PDF objects out of 1000 (max. 8388607)
+ 32 named destinations out of 1000 (max. 500000)
  37 words of extra memory for PDF output out of 10000 (max. 10000000)
 

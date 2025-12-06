@@ -53,7 +53,7 @@
 
 \title{\textbf{Stima della concentrazione parziale di siti sostituzionali in polveri di perovskite doppia}}
 \author{\textbf{Luca Sanna, 60/68/65275}}
-\date{\textbf{05/12/2025}}
+\date{\textbf{06/12/2025}}
 
 
 \begin{document}
@@ -72,7 +72,7 @@ La tecnica XRD (X-Ray Diffraction) permette di sondare il reticolo reciproco di 
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width = 1\linewidth]{../Bragg.png}
+  \includegraphics[width = 0.8\linewidth]{../Bragg.png}
   \caption{Schema esemplificativo della legge di Bragg.}
   \label{fig: Bragg}
 \end{figure}
@@ -114,7 +114,7 @@ Le polveri osservate sono quattro perovskiti, di cui due ternarie, Cs$_2$AgInCl$
 
 
 \section*{Risultati}
-Il fit di ogni diffrattogramma è stato realizzato mediante il software \emph{MAUD}~\supercite{maud}, che permette di usufruire del \emph{raffinamento Rietveld}; si tratta di un criterio di regressione che si basa sul \emph{metodo dei minimi quadrati non-lineare}. L'obiettivo è minimizzare la \emph{Weighted Sum of Sqaures}:
+Il fit di ogni diffrattogramma è stato realizzato mediante il software MAUD~\supercite{maud}, che permette di usufruire del \emph{raffinamento Rietveld}; si tratta di un criterio di regressione che si basa sul \emph{metodo dei minimi quadrati non-lineare}. L'obiettivo è minimizzare la \emph{Weighted Sum of Sqaures}:
 \begin{equation}
   WSS = \displaystyle\sum_{k} w_k \left\lbrack I^{(exp)}_k - I^{(fit)}_k \right\rbrack^2,
   \label{eq: WSS}
@@ -139,7 +139,7 @@ dove $k$ è un indice che corre su ogni $k$-esima misura del diffrattogramma, $I
   \label{fig: Na}
 \end{figure}
 
-In termini pratici, si tiene in considerazione il valore $R$ di \emph{Weighted Pattern}:
+In termini pratici, si tiene in considerazione il valore-$R$ di \emph{Weighted Pattern}:
 \begin{equation}
   R_{wp} = \sqrt{\frac{\displaystyle\sum_{k} \left\{ w_k \left\lbrack I^{(exp)}_k - I^{(fit)}_k \right\rbrack \right\}^2}{\displaystyle\sum_{k} \left\lbrack w_k I^{(exp)}_k \right\rbrack^2}},
   \label{eq: Rwp}
@@ -148,24 +148,110 @@ la cui riduzione progressiva è sintomo che la minimizzazione dell'equazione \re
 
 Le funzioni matematiche, che secondo Rietveld consentono di costruire la regressione bersaglio, dipendendono da svariati parametri; soltanto alcuni, però, sono significativi abbastanza da dominare il processo di ottimizzazione. Inoltre, è importante seguire un ordine di priorità nel raffinamento, cosicché la minimizzazione non debba far fronte alla variazione di più parametri di quanti l'algoritmo riesca a gestire, al fine di raggiungere la convergenza.
 
-Le figure \ref{fig: Ag} e \ref{fig: Na} siano di riferimento allo scopo di visualizzare 
+Le figure \ref{fig: Ag} e \ref{fig: Na}, raffinamento dei diffrattogrammi per i campioni Cs$_2$AgInCl$_6$ e Cs$_2$NaInCl$_6$, siano di riferimento iniziale per la visualizzazione degli effetti del percorso di ottimizzazione.
+
+Innanzitutto, si è considerato attendibile adoperare, come set di valori di partenza per i parametri che descrivono il campione, i file rispettivi ".cif", ottenibili in COD (Crystallography Open Database)~\supercite{cod}. Per quanto riguarda la polvere Cs$_2$NaInCl$_6$, a causa della mancanza in database della struttura cristallina associata, si è modificato manualmente il ".cif" della polvere Cs$_2$AgInCl$_6$, sostituendo ogni denominazione dell'argento con il sodio.
+
+Poste le fondamenta per dare inizio al raffinamento, si è ritenuto opportuno escludere dal grafico tutti quei punti di minore o maggiore $2\vartheta$, rispettivamente, del picco a minore e maggiore $2\vartheta$; essi, infatti, non portano alcun contributo essenziale al fit e anzi, in genere, poiché popolano gli estremi dell'intervallo $\Delta 2\vartheta$ osservato, sono più facilmente soggetti ad errori sistematici e/o casuali, che possono inficiare la buona riuscita della regressione.
+\begin{center}
+\begin{table}[htbp]\setlength\belowcaptionskip{-20pt}
+    \centering
+\begin{tabular}{cc}
+    \hline
+    \textbf{campione} & $\mathbf{\Delta 2 \vartheta}$ ($deg$) \\
+    \hline
+    Cs$_2$AgInCl$_6$ & $\lbrack14.4, 62.0\rbrack$\\
+    Cs$_2$NaInCl$_6$ & $\lbrack14.15, 63.50\rbrack$\\
+    Cs$_2$Ag$_{0.8}$Na$_{0.2}$InCl$_6$ & $\lbrack14.0, 63.0\rbrack$\\
+    Cs$_2$Ag$_{0.4}$Na$_{0.6}$InCl$_6$ & $\lbrack14.0, 64.0\rbrack$\\
+    \hline
+\end{tabular}
+\caption{Intervalli di angolo di diffrazione, all'interno dei quali i dati sperimentali sono stati fittati secondo Rietveld, per i rispettivi diffrattogrammi.}
+\label{tab: delta2theta}
+\end{table}
+\end{center}
+
+\noindent In tabella \ref{tab: delta2theta}, sono elencati gli estremi in $2\vartheta$ scelti per escludere le regioni limitrofe di maggior rumore (per completezza, sono stati compresi anche i campioni il cui fit non è stato ancora mostrato). Grazie a questo accorgimento, è possibile procedere con il calcolo preventivo dei coefficienti polinomiali di ordine zero, primo e secondo che approssimano il background.
+
+Il passo successivo è determinare i valori iniziali per i parametri che descrivono l'apparato strumentale (quali intensità della sorgente e un possibile offset di ordine zero su $2\vartheta$) e il grado di isotropia del campione (quali la dimensione del cristallo e il \emph{micro-strain}). Dei valori di default, si è reso necessario modificare soltanto la sezione "Caglioti PV" (eccetto qualsiasi termine che descrive condizioni di \emph{broadening}, poiché hanno un contributo non sufficiente a giustificarne l'implementazione), che va a toccare la forma che i picchi seguono nel processo di fitting.
 
 \begin{figure}[htbp]
   \centering
   \includegraphics[width = 1\linewidth]{../Datasets/A02_Cs2Na0.2Ag0.8InCl6.pdf}
-  \caption{.}
+  \caption{Fit Rietveld per un diffrattogramma di Cs$_2$Ag$_{0.8}$Na$_{0.2}$InCl$_6$ in polvere.}
   \label{fig: Ag08Na02}
 \end{figure}
 
 \begin{figure}[htbp]
   \centering
   \includegraphics[width = 1\linewidth]{../Datasets/A04_Cs2Na0.6Ag0.4InCl6.pdf}
-  \caption{.}
+  \caption{Fit Rietveld per un diffrattogramma di Cs$_2$Ag$_{0.4}$Na$_{0.6}$InCl$_6$ in polvere.}
   \label{fig: Ag04Na06}
 \end{figure}
 
+Infine, è tempo di rilasciare il vincolo sulla quantità bersaglio del fit, ovvero la costante reticolare. A questo punto, secondo l'equazione \ref{eq: Rwp}, si è ottenuto un valore che si aggira attorno al $20\%$. A seguito di un'osservazione empirica di un grado di bontà della regressione non soddisfacente, si è scelto di raffinare anche gli elementi della matrice B, che appare nel termine del fattore di struttura del cristallo.
+
+\begin{center}
+\begin{table}[htbp]\setlength\belowcaptionskip{-20pt}
+    \centering
+\begin{tabular}{cc}
+    \hline
+    \textbf{campione} & $\mathbf{R_{wp}}$ ($\%$) \\
+    \hline
+    Cs$_2$AgInCl$_6$ & $9.75$\\
+    Cs$_2$NaInCl$_6$ & $13.00$\\
+    Cs$_2$Ag$_{0.8}$Na$_{0.2}$InCl$_6$ & $9.15$\\
+    Cs$_2$Ag$_{0.4}$Na$_{0.6}$InCl$_6$ & $10.36$\\
+    \hline
+\end{tabular}
+\caption{Valori-$R$ \emph{Weighted Pattern} di fit Rietveld, per i rispettivi diffrattogrammi.}
+\label{tab: Rwp}
+\end{table}
+\end{center}
+
+In tabella \ref{tab: Rwp} sono elencate le stime finali per i valori-$R$ \emph{Weighted Pattern} (come in tabella \ref{tab: delta2theta}, per completezza, sono stati compresi anche i campioni il cui fit non è stato ancora discusso). Salta all'occhio il risultato ottenuto per il campione Cs$_2$NaInCl$_6$, il cui maggiore valore, rispetto alle controparti, si attribuisce all'adattamento rozzo del file ".cif" per il campione Cs$_2$AgInCl$_6$.
+
+Spostando l'attenzione alle figure \ref{fig: Ag08Na02} e \ref{fig: Ag04Na06}, come suggeriscono le tabelle \ref{tab: delta2theta} e \ref{tab: Rwp}, il raffinamento, per i campioni Cs$_2$Ag$_{0.8}$Na$_{0.2}$InCl$_6$ e Cs$_2$Ag$_{0.4}$Na$_{0.6}$InCl$_6$, ha subito un processo evolutivo simile a quello appena descritto. Infatti, a causa della composizione quaternaria di queste polveri, si è partiti dal file ".cif" per il campione Cs$_2$AgInCl$_6$ (considerato più affidabile della controparte Cs$_2$NaInCl$_6$) e si è aggiunto il quarto elemento, ovvero il sodio, modificando la concentrazione totale iniziale, sia di quest'ultimo sia dell'argento, in accordo con i valori nominali già noti delle rispettive concentrazioni parziali. Successivamente, si è rimosso il vincolo anche sulle percentuali di occupazione e si è lasciato che il software MAUD completasse il fit.
+\begin{center}
+\begin{table}[htbp]\setlength\belowcaptionskip{-20pt}
+    \centering
+\begin{tabular}{cc}
+    \hline
+    \textbf{campione} & $\mathbf{a}$ ($\text{\AA}$) \\
+    \hline
+    Cs$_2$AgInCl$_6$ & $10.4805 \pm 0.0002$ \\
+    Cs$_2$NaInCl$_6$ & $10.4898 \pm 0.0002$\\
+    Cs$_2$Ag$_{0.8}$Na$_{0.2}$InCl$_6$ & $10.5093 \pm 0.0005$\\
+    Cs$_2$Ag$_{0.4}$Na$_{0.6}$InCl$_6$ & $10.5318 \pm 0.0003$\\
+    \hline
+\end{tabular}
+\caption{Costanti reticolari $a$ calcolate secondo fit Rietveld, per i rispettivi diffrattogrammi.}
+\label{tab: a}
+\end{table}
+\end{center}
+La tabella \ref{tab: a} mostra i risultati ottenuti per ogni costante reticolare.
+
+Esplicitando $x$ nell'equazione \ref{eq: Vegard}, è finalmente possibile stimare il valore di concentrazione relativa parziale tra i due elementi, argento e sodio, che condividono gli stessi siti di occupazione. Si è posto 
+\begin{center}
+\begin{table}[htbp]\setlength\belowcaptionskip{-20pt}
+    \centering
+\begin{tabular}{cc}
+    \hline
+    \textbf{campione} & $\mathbf{x}$\\
+    \hline
+    Cs$_2$Ag$_{0.8}$Na$_{0.2}$InCl$_6$ & $0.180 \pm 0.006$\\
+    Cs$_2$Ag$_{0.4}$Na$_{0.6}$InCl$_6$ & $0.560 \pm 0.011$\\
+    \hline
+\end{tabular}
+\caption{Concentrazioni relative parziali $x$ di argento e sodio, in perovskiti del tipo Cs$_2$Ag$_{1-x}$Na$_{x}$InCl$_6$, calcolate secondo la legge di Vegard.}
+\label{tab: x}
+\end{table}
+\end{center}
+La tabella \ref{tab: x} mostra le stime computate. L'errore sulla misura è determinato secondo propagazione per radice quadrata della somma in quadratura delle derivate parziali di ogni grandezza coinvolta.
+
 
 \section*{Conclusioni}
+
 
 
 

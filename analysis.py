@@ -18,7 +18,7 @@ samples_plot = ["$Cs_2AgInCl_6$", "$Cs_2Na_{{0.2}}Ag_{{0.8}}InCl_6$", "$Cs_2Na_{
 # col = 1: experimental data (counts)
 # col = 2: fitted data (counts)
 #####################################################
-folder = "XRD-dust/Datasets/"
+folder = "Datasets/"
 files = os.listdir(folder)
 
 # Cut datasets and fits.
@@ -75,7 +75,7 @@ def plot(dataset_raw, dataset_fit, sample, sample_plot):
     ax[0].text(0.67, 0.85,
              "Rietveld refinement of a\nBragg-Brentano XRD diffractogram\nfor a " + sample_plot + " powder sample",
              **tnrfont,
-             fontsize = 50,
+             fontsize = 48,
              horizontalalignment = 'center',
              verticalalignment = 'center',
              transform = ax[0].transAxes,
@@ -153,7 +153,7 @@ for sample in range(len(samples)):
     R_wp.append(np.sqrt(np.sum((w[sample] * (datasets_fit[sample][:, 1] - datasets_fit[sample][:, 2]))**2) / np.sum((w[sample] * datasets_fit[sample][:, 1])**2)))
     R_exp.append(np.sqrt(len(datasets_fit[sample][:, 1]) / np.sum((w[sample] * datasets_fit[sample][:, 1])**2)))
     chis_squared.append((R_wp[sample]/R_exp[sample])**2)
-    print("For " + samples[sample] + ", R_wp = {}, R_exp = {} and so chi^2 = {}.".format(round(R_wp[sample], 3), round(R_exp[sample], 3), round(chis_squared[sample], 3)))
+    print("For " + samples[sample] + ", R_wp = {}, R_exp = {} and so chi^2 = {}.".format(round(R_wp[sample], 4), round(R_exp[sample], 3), round(chis_squared[sample], 3)))
 
 # Concentrantions [%].
 #####################################################
