@@ -1,0 +1,15 @@
+[0] Config.pm:328> INFO - This is Biber 2.21
+[0] Config.pm:331> INFO - Logfile is 'Luca_Sanna_XRD-powder_60-68-65275.blg'
+[540] biber-MSWIN64:342> INFO - === 
+[733] Biber.pm:421> INFO - Reading 'Luca_Sanna_XRD-powder_60-68-65275.bcf'
+[1009] Biber.pm:1002> INFO - Found 3 citekeys in bib section 0
+[1042] Biber.pm:4487> INFO - Processing section 0
+[1104] Biber.pm:4678> INFO - Looking for bibtex file 'citations.bib' for section 0
+[1212] bibtex.pm:1713> INFO - LaTeX decoding ...
+[1243] bibtex.pm:1519> INFO - Found BibTeX data source 'citations.bib'
+[1302] UCollate.pm:68> INFO - Overriding locale 'it-IT' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1302] UCollate.pm:68> INFO - Overriding locale 'it-IT' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1302] Biber.pm:4307> INFO - Sorting list 'nty/global//global/global/global' of type 'entry' with template 'nty' and locale 'it-IT'
+[1302] Biber.pm:4313> INFO - No sort tailoring available for locale 'it-IT'
+[1419] bbl.pm:676> INFO - Writing 'Luca_Sanna_XRD-powder_60-68-65275.bbl' with encoding 'UTF-8'
+[1423] bbl.pm:779> INFO - Output to Luca_Sanna_XRD-powder_60-68-65275.bbl
